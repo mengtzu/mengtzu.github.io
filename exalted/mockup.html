@@ -1,0 +1,2115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Exalted: Becoming (a Tutorial for Exalted Second Exition)</title>
+
+    <link rel="Stylesheet" href="css/exalted.css" />
+
+</head>
+<body>
+
+        <div id="header"><img src="images/Exalted2Logo.png" /></div>
+
+
+        <div id="diceBox"></div>
+
+        <div id="currentResponse">
+        
+
+        
+        </div>
+
+        <div id="currentActions">
+
+             <div id="characterSheetToggle">
+        
+                <input type="button" id="characterSheetToggleButton" value="Toggle Character Sheet" />
+
+            </div>
+
+        
+               
+
+                <input type="button" value="Click here to highlight Sakuya's relevant traits" id="card0Action0" />
+        
+
+        
+        </div>
+
+
+
+        <div id="characterSheet">
+            
+            <div id="characterSheetHeading" class="characterSheetSection">
+
+                <div id="characterSheetName" class="characterSheetHeadingTraits">
+                
+                    &nbsp;
+                
+                </div>
+
+                <div id="characterSheetMotivation" class="characterSheetHeadingTraits">
+                
+                    <strong>Motivation:</strong>
+                
+                </div>
+
+                <div id="characterSheetTypeCasteWrapper" class="characterSheetHeadingTraits">
+
+                    <div id="characterSheetType">
+                
+                        <strong>Type:</strong>
+                
+                    </div>
+
+                    <div id="characterSheetCaste">
+                
+                        <strong>Caste:</strong>
+                
+                    </div>
+                        
+                </div>
+
+                <div id="characterSheetLogo">
+                
+                    <img src="images/characterSheet/characterSheetLogo.png" />
+                
+                </div>
+
+
+
+            </div>
+
+            <div id="attributesHeader" class="characterSheetSectionHeader">
+            
+                ATTRIBUTES
+            
+            </div>
+
+            <div id="attributes" class="characterSheetSection">
+
+
+                <div id="mentalAttributes" class="characterSheetAttributeGroup">
+                
+                   <div id="traitWrapperPerception" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelPerception" class="characterSheetTraitLabel">
+                        
+                            Perception
+                        
+                        </div>
+
+                        <div id="traitDotsPerception" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotPerception1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperIntelligence" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelIntelligence" class="characterSheetTraitLabel">
+                        
+                            Intelligence
+                        
+                        </div>
+
+                        <div id="traitDotsIntelligence" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotIntelligence1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperWits" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelWits" class="characterSheetTraitLabel">
+                        
+                            Wits
+                        
+                        </div>
+
+                        <div id="traitDotsWits" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotWits1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                
+                </div>
+
+                 <div id="socialAttributes" class="characterSheetAttributeGroup">
+                
+                    <div id="traitWrapperCharisma" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelCharisma" class="characterSheetTraitLabel">
+                        
+                            Charisma
+                        
+                        </div>
+
+                        <div id="traitDotsCharisma" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotCharisma1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperManipulation" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelManipulation" class="characterSheetTraitLabel">
+                        
+                            Manipulation
+                        
+                        </div>
+
+                        <div id="traitDotsManipulation" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotManipulation1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperAppearance" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelAppearance" class="characterSheetTraitLabel">
+                        
+                            Appearance
+                        
+                        </div>
+
+                        <div id="traitDotsAppearance" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotAppearance1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance5" />
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+
+            
+                <div id="physicalAttributes" class="characterSheetAttributeGroup">
+                
+                    <div id="traitWrapperStrength" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelStrength" class="characterSheetTraitLabel">
+                        
+                            Strength
+                        
+                        </div>
+
+                        <div id="traitDotsStrength" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotStrength1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperDexterity" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelDexterity" class="characterSheetTraitLabel">
+                        
+                            Dexterity
+                        
+                        </div>
+
+                        <div id="traitDotsDexterity" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotDexterity1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperStamina" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelStamina" class="characterSheetTraitLabel">
+                        
+                            Stamina
+                        
+                        </div>
+
+                        <div id="traitDotsStamina" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotStamina1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div class="clear"></div>
+                
+                </div>
+
+            </div>
+
+
+            <div id="abilitiesHeader" class="characterSheetSectionHeader">
+            
+                ABILITIES
+            
+            </div>
+
+
+            <div id="abilities" class="characterSheetSection">
+
+
+             <div id="twilightAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="twilightAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          TWILIGHT                               
+
+                    </div>
+                
+                    <div id="traitWrapperCraft" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelCraft" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityCraft" />
+
+                            Craft
+                        
+                        </div>
+
+                        <div id="traitDotsCraft" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperInvestigation" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelInvestigation" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityInvestigation" />
+
+                            Investigation
+                        
+                        </div>
+
+                        <div id="traitDotsInvestigation" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperLore" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelLore" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityLore" />
+
+                            Lore
+                        
+                        </div>
+
+                        <div id="traitDotsLore" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperMedicine" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelMedicine" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityMedicine" />
+
+                            Medicine
+                        
+                        </div>
+
+                        <div id="traitDotsMedicine" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperOccult" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelOccult" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityOccult" />
+
+                            Occult
+                        
+                        </div>
+
+                        <div id="traitDotsOccult" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>                         
+
+            
+                <div id="zenithAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="zenithAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          ZENITH                                
+
+                    </div>
+                
+                    <div id="traitWrapperIntegrity" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelIntegrity" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityIntegrity" />
+
+                            Integrity
+                        
+                        </div>
+
+                        <div id="traitDotsIntegrity" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperPerformance" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelPerformance" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityPerformance" />
+
+                            Performance
+                        
+                        </div>
+
+                        <div id="traitDotsPerformance" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperPresence" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelPresence" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityPresence" />
+
+                            Presence
+                        
+                        </div>
+
+                        <div id="traitDotsPresence" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperResistance" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelResistance" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityResistance" />
+
+                            Resistance
+                        
+                        </div>
+
+                        <div id="traitDotsResistance" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSurvival" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSurvival" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySurvival" />
+
+                            Survival
+                        
+                        </div>
+
+                        <div id="traitDotsSurvival" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>
+
+            
+
+
+                            <div id="dawnAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="dawnAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          DAWN                                
+
+                    </div>
+                
+                    <div id="traitWrapperArchery" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelArchery" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityArchery" />
+
+                            Archery
+                        
+                        </div>
+
+                        <div id="traitDotsArchery" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperMartialArts" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelMartialArts" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityMartialArts" />
+
+                            Martial Arts
+                        
+                        </div>
+
+                        <div id="traitDotsMartial Arts" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperMelee" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelMelee" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityMelee" />
+
+                            Melee
+                        
+                        </div>
+
+                        <div id="traitDotsMelee" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperThrown" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelThrown" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityThrown" />
+
+                            Thrown
+                        
+                        </div>
+
+                        <div id="traitDotsThrown" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperWar" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelWar" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityWar" />
+
+                            War
+                        
+                        </div>
+
+                        <div id="traitDotsWar" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                
+                </div>               
+
+                
+
+                <div id="specialtiesAbilityGroup" class="characterSheetAbilityGroup">
+                
+                    <div id="specialtiesAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          SPECIALTIES                                
+
+                    </div>
+                
+                    <div id="traitWrapperSpecialty1" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty1" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty1" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty1" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty1_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty1_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty1_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty2" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty2" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty2" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty2" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty2_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty2_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty2_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty3" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty3" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty3" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty3" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty3_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty3_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty3_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty4" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty4" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty4" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty4" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty4_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty4_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty4_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty5" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty5" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty5" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty5" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty5_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty5_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty5_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>
+            
+
+<div id="eclipseAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="eclipseAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          ECLIPSE                                
+
+                    </div>
+                
+                    <div id="traitWrapperBureaucracy" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelBureaucracy" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityBureaucracy" />
+
+                            Bureaucracy
+                        
+                        </div>
+
+                        <div id="traitDotsBureaucracy" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperLinguistics" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelLinguistics" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityLinguistics" />
+
+                            Linguistics
+                        
+                        </div>
+
+                        <div id="traitDotsLinguistics" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperRide" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelRide" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityRide" />
+
+                            Ride
+                        
+                        </div>
+
+                        <div id="traitDotsRide" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSail" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSail" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySail" />
+
+                            Sail
+                        
+                        </div>
+
+                        <div id="traitDotsSail" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSocialise" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSocialise" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySocialise" />
+
+                            Socialise
+                        
+                        </div>
+
+                        <div id="traitDotsSocialise" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>
+
+                <div id="nightAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="nightAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          NIGHT                               
+
+                    </div>
+                
+                    <div id="traitWrapperAthletics" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelAthletics" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityAthletics" />
+
+                            Athletics
+                        
+                        </div>
+
+                        <div id="traitDotsAthletics" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperAwareness" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelAwareness" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityAwareness" />
+
+                            Awareness
+                        
+                        </div>
+
+                        <div id="traitDotsAwareness" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperDodge" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelDodge" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityDodge" />
+
+                            Dodge
+                        
+                        </div>
+
+                        <div id="traitDotsDodge" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperLarceny" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelLarceny" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityLarceny" />
+
+                            Larceny
+                        
+                        </div>
+
+                        <div id="traitDotsLarceny" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperStealth" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelStealth" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityStealth" />
+
+                            Stealth
+                        
+                        </div>
+
+                        <div id="traitDotsStealth" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div class="clear"></div>
+                
+                </div>
+
+
+            </div>
+
+            <div id="advantagesHeader" class="characterSheetSectionHeader">
+            
+                ADVANTAGES
+            
+            </div>
+
+
+            <div id="advantages" class="characterSheetSection">
+
+                <div id="advantagesTier1" class="characterSheetSubsection">
+
+                     <div id="virtues">
+                 
+                        <div id="virtueLabel" class="characterSheetAbilityGroupLabel">
+                    
+                            VIRTUES
+                    
+                        </div>
+
+                        <div id="compassion" class="characterSheetVirtueWrapper">
+
+                            <div id="compassionLabel" class="characterSheetVirtueLabel">
+                        
+                                Compassion
+                        
+                            </div>
+
+                            <div id="compassionDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotCompassion1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion5" />
+                        
+                            </div>
+
+                            <div id="compassionBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+                        <div id="temperance" class="characterSheetVirtueWrapper">
+
+                            <div id="temperanceLabel" class="characterSheetVirtueLabel">
+                        
+                                Temperance
+                        
+                            </div>
+
+                            <div id="temperanceDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotTemperance1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance5" />
+                        
+                            </div>
+
+                            <div id="temperanceBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+                        <div id="conviction" class="characterSheetVirtueWrapper">
+
+                            <div id="convictionLabel" class="characterSheetVirtueLabel">
+                        
+                                Conviction
+                        
+                            </div>
+
+                            <div id="convictionDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotConviction1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction5" />
+                        
+                            </div>
+
+                            <div id="convictionBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+                        <div id="valour" class="characterSheetVirtueWrapper">
+
+                            <div id="valourLabel" class="characterSheetVirtueLabel">
+                        
+                                Valor
+                        
+                            </div>
+
+                            <div id="valourDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotValor1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor5" />
+                        
+                            </div>
+
+                            <div id="valourBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+
+                    </div>
+
+
+                     <div id="willpower">
+                 
+                        <div id="willpowerLabel" class="characterSheetAbilityGroupLabel">
+                    
+                            WILLPOWER
+                    
+                        </div>
+
+                        <div id="willpowerDots">
+                    
+                            <img src="images/characterSheet/dotFull.png" id="traitDotWillpower1" />
+                            <img src="images/characterSheet/dotFull.png" id="traitDotWillpower2" />
+                            <img src="images/characterSheet/dotFull.png" id="traitDotWillpower3" />
+                            <img src="images/characterSheet/dotFull.png" id="traitDotWillpower4" />
+                            <img src="images/characterSheet/dotFull.png" id="traitDotWillpower5" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower6" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower7" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower8" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower9" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower10" />
+                        
+
+                        </div>
+
+                        <div id="willpowerBoxes">
+                    
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower1" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower2" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower3" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower4" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower5" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower6" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower7" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower8" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower9" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower10" />
+                    
+                        </div>
+
+                        <div id="defenceValuesLabel" class="characterSheetAbilityGroupLabel">
+                    
+                            DEFENCE VALUES
+                    
+                        </div>
+
+                        <div id="dodgeDV" class="defenceValue">
+                    
+                            Dodge:
+
+                        </div>
+
+                        <div id="dodgeMDV" class="defenceValue">
+                    
+                            M Dodge:
+                    
+                        </div>
+
+                        <div id="parryMDV" class="defenceValue">
+                    
+                            M Parry:
+                    
+                        </div>
+                 
+                     </div>
+                        
+                     <div id="backgroundsAbilityGroup" class="characterSheetAbilityGroup">
+                
+                        <div id="backgroundsAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              BACKGROUNDS                                
+
+                        </div>
+                
+                        <div id="traitWrapperBackground1" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground1" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground1" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground2" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground2" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground2" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground3" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground3" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground3" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground4" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground4" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground4" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground5" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground5" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground5" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div class="clear"></div>
+
+                    </div>
+            
+                </div>
+
+
+                <div id="advantagesTier2" class="characterSheetSubsection">
+
+                    
+
+
+                    <div id="soak">
+
+                        <div id="soakAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              SOAK AND ARMOUR                               
+
+                        </div>
+
+                        <div class="soakTableWrapper">
+                        
+                            <table id="soakTable">
+                            
+                                <tr id="soakTableHeader">
+                                
+                                    <th>Type</th>
+                                    <th>Bashing</th>
+                                    <th>Lethal</th>
+                                    <th>Aggravated</th>
+                                    <th>Hardness</th>
+                                    <th>Mobility</th>
+                                    <th>Fatigue</th>
+
+                                </tr>
+
+                                <tr class="soakTableBody">
+                                
+                                    <td id="soakTypeNatural">Natural</td>
+                                    <td id="soakBashingNatural"></td>
+                                    <td id="soakLethalNatural"></td>
+                                    <td id="soakAggravatedNatural"></td>
+                                    <td id="soakHardnessNatural"> - </td>
+                                    <td id="soakMobilityNatural"> - </td>
+                                    <td id="soakFatigueNatural"> - </td>
+                                
+                                </tr>
+
+                                <tr class="soakTableBody">
+
+                                    <td id="soakTypeArmour">Armour</td>
+                                    <td id="soakBashingArmour"></td>
+                                    <td id="soakLethalArmour"></td>
+                                    <td id="soakAggravatedArmour"></td>
+                                    <td id="soakHardnessArmour"> - </td>
+                                    <td id="soakMobilityArmour"> - </td>
+                                    <td id="soakFatigueArmour"> - </td>
+
+                                </tr>
+                            
+                            </table>
+                        
+                        </div>
+                    
+                        
+                    
+                    </div>
+
+<div id="health">
+
+                        
+                    
+                        <div id="healthAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              HEALTH                                
+
+                        </div>      
+                        
+                        <div id="healthLevels0" class="healthLevels">
+                            
+                            <div id="healthLevels0Label" class="healthLevelsLabel">
+
+                                -0
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels0Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth0_1" />
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="healthLevels1" class="healthLevels">
+                            
+                            <div id="healthLevels1Label" class="healthLevelsLabel">
+
+                                -1
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels1Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth1_1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth1_2" />
+                            
+                            </div>
+                            
+                        
+                        </div>
+
+                        <div id="healthLevels2" class="healthLevels">
+                            
+                            <div id="healthLevels2Label" class="healthLevelsLabel">
+
+                                -2
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels2Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth2_1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth2_2" />
+                            
+                            </div>
+                            
+                        
+                        </div>
+
+                        <div id="healthLevels4" class="healthLevels">
+                            
+                            <div id="healthLevels4Label" class="healthLevelsLabel">
+
+                                -4
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels4Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth4_1" />
+                                                            
+                            </div>
+                            
+                        </div>
+
+                        <div id="healthLevelsIncapacitated" class="healthLevels">
+                            
+                            <div id="healthLevelsIncapacitatedLabel" class="healthLevelsLabel">
+
+                                Incapacitated
+                            
+                            </div>
+
+                            
+                            <div id="healthLevelsIncapacitatedBoxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealthIncapacitated_1" />
+                                                            
+                            </div>
+                            
+                        </div>
+
+                        
+                    
+                    
+                    </div>
+
+                    <div id="weapons">
+                    
+                        <div id="weaponsAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              WEAPONS                               
+
+                        </div>
+
+                        <div class="weaponsTableWrapper">
+                        
+                            <table id="weaponTable">
+                            
+                                <tr id="weaponTableHeader">
+                                
+                                    <th>Name</th>
+                                    <th>Speed</th>
+                                    <th>Accuracy</th>
+                                    <th>Damage</th>
+                                    <th>Parry DV</th>
+                                    <th>Rate</th>
+                                    <th>Range</th>
+                                    <th>Tags</th>
+
+                                </tr>
+
+                                <tr class="weaponTableBody">
+                                
+                                    <td id="weaponName1"></td>
+                                    <td id="weaponSpeed1"></td>
+                                    <td id="weaponAccuracy1"></td>
+                                    <td id="weaponDamage1"></td>
+                                    <td id="weaponParryDV1"></td>
+                                    <td id="weaponRate1"></td>
+                                    <td id="weaponRange1"> - </td>
+                                    <td id="weaponTags1"></td>
+                                
+                                </tr>
+
+                                <tr class="weaponTableBody">
+                                
+                                    <td id="weaponName2"></td>
+                                    <td id="weaponSpeed2"></td>
+                                    <td id="weaponAccuracy2"></td>
+                                    <td id="weaponDamage2"></td>
+                                    <td id="weaponParryDV2"></td>
+                                    <td id="weaponRate2"></td>
+                                    <td id="weaponRange2"> - </td>
+                                    <td id="weaponTags2"></td>
+                                
+                                </tr>
+                                
+                                <tr class="weaponTableBody">
+                                
+                                    <td id="weaponName3"></td>
+                                    <td id="weaponSpeed3"></td>
+                                    <td id="weaponAccuracy3"></td>
+                                    <td id="weaponDamage3"></td>
+                                    <td id="weaponParryDV3"></td>
+                                    <td id="weaponRate3"></td>
+                                    <td id="weaponRange3"> - </td>
+                                    <td id="weaponTags3"></td>
+                                
+                                </tr>
+                                                                                            
+                            </table>
+                        
+                        </div>
+                    
+                        
+                    
+                    </div>
+
+                    
+                
+                    
+                    <div class="clear"></div>
+                
+                </div>
+
+            </div>
+
+
+             <div id="exaltedAdvantagesHeader" class="characterSheetSectionHeader">
+            
+               EXALTED ADVANTAGES
+            
+             </div>
+
+
+
+
+
+             <div id="exaltedAdvantages" class="characterSheetSectionLast">
+
+                    <div id="charms">
+                    
+                        <div id="virtueFlawAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              CHARMS AND POWERS                               
+
+                        </div>
+                    
+                        <div id="charm1" class="characterSheetCharm">
+
+                            <div id="charm1Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm1Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm2" class="characterSheetCharm">
+
+                            <div id="charm2Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm2Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm3" class="characterSheetCharm">
+
+                            <div id="charm3Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm3Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm4" class="characterSheetCharm">
+
+                            <div id="charm4Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm4Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm5" class="characterSheetCharm">
+
+                            <div id="charm5Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm5Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm6" class="characterSheetCharm">
+
+                            <div id="charm6Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm6Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm7" class="characterSheetCharm">
+
+                            <div id="charm7Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm7Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm8" class="characterSheetCharm">
+
+                            <div id="charm8Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm8Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm9" class="characterSheetCharm">
+
+                            <div id="charm9Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm9Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm10" class="characterSheetCharm">
+
+                            <div id="charm10Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm10Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm11" class="characterSheetCharm">
+
+                            <div id="charm11Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm11Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm12" class="characterSheetCharm">
+
+                            <div id="charm12Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm12Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm13" class="characterSheetCharm">
+
+                            <div id="charm13Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm13Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm14" class="characterSheetCharm">
+
+                            <div id="charm14Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm14Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm15" class="characterSheetCharm">
+
+                            <div id="charm15Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm15Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+ 
+
+                    
+                    </div>
+
+
+             
+                   <div id="essence">
+                    
+                        <div id="essenceAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              ESSENCE                               
+
+                        </div>
+
+                        <div id="essenceDots">
+                    
+                            <img src="images/characterSheet/dotFull.png" id="traitDotEssence1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence5" />
+                        
+
+                        </div>
+
+                        <div id="personalAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              Personal                               
+
+                        </div>
+
+                        <div id="essencePoolPersonalTotal" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPersonalTotalLabel" class="characterSheetEssencePoolLabel">
+
+                                Total
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPersonalTotalNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="essencePoolPersonalCommitted" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPersonalCommittedLabel" class="characterSheetEssencePoolLabel">
+
+                                Committed
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPersonalCommittedNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="essencePoolPersonalCap" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPersonalCapLabel" class="characterSheetEssencePoolLabel">
+
+                                Cap
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPersonalCapNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="essencePoolPersonalAvailable" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPersonalAvailableLabel" class="characterSheetEssencePoolLabel">
+
+                                Available
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPersonalAvailableNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="peripheralAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              Peripheral                               
+
+                        </div>
+
+
+                       <div id="essencePoolPeripheralTotal" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPeripheralTotalLabel" class="characterSheetEssencePoolLabel">
+
+                                Total
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPeripheralTotalNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="essencePoolPeripheralCommitted" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPeripheralCommittedLabel" class="characterSheetEssencePoolLabel">
+
+                                Committed
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPeripheralCommittedNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="essencePoolPeripheralCap" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPeripheralCapLabel" class="characterSheetEssencePoolLabel">
+
+                                Cap
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPeripheralCapNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="essencePoolPeripheralAvailable" class="characterSheetEssencePool">
+                            
+                            <div id="essencePoolPeripheralAvailableLabel" class="characterSheetEssencePoolLabel">
+
+                                Available
+                            
+                            </div>
+
+                            
+                            <div id="essencePoolPeripheralAvailableNumber" class="characterSheetEssencePoolNumber">
+
+                                0
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div class="clear"></div>
+                        
+
+                        <div id="limitAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              LIMIT BREAK                               
+
+                        </div>
+
+                        <div id="limitBoxes">
+                    
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit1" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit2" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit3" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit4" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit5" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit6" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit7" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit8" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit9" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit10" />
+                    
+                        </div>
+
+                        <div id="virtueFlawAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              Virtue Flaw                               
+
+                        </div>
+
+                        <div id="virtueFlaw">
+                        
+                            -
+                        
+                        </div>
+
+                    
+                    </div>
+
+
+                    <div class="clear"></div>
+
+             </div>
+        
+        </div>
+
+
+
+    	<script src="js/jquery-1.7.1.js"></script>
+        <script src="js/constants.js"></script>
+        <script src="js/functionLibrary.js"></script>
+		<script src="js/characterSheet.js"></script>
+        <script src="js/mockup.js"></script>
+        <script src="js/tutorial.js"></script>
+
+
+</body>
+</html>

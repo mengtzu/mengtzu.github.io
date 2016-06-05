@@ -1,0 +1,3375 @@
+<!DOCTYPE html>
+<head>
+    <title>Exalted: Becoming (a Tutorial for Exalted Second Exition)</title>
+
+    <link rel="Stylesheet" href="css/exalted.css" />
+    <link rel="Stylesheet" href="css/sunny/jquery-ui-1.8.16.custom.css" />
+
+</head>
+<body>
+
+        <div id="header"><a name="top"></a><img src="images/Exalted2Logo.png" /></div>
+
+        <div class="characterSheetToggle" id="characterSheetToggleOff">&lt;&lt;</div>
+
+        <div class="characterSheetToggle" id="characterSheetToggleOn">&gt;&gt;</div>
+
+        <div id="combatTracker">
+        
+            <div id="combatTrackerHeader">
+
+                <div id="combatTrackerTitle">
+            
+                    <strong>Combat: <span id="combatTrackerTitleTarget"></span></strong>
+            
+                </div>
+
+                <div id="combatReactionCount"><strong>Reaction Count: </strong><span id="reactionCountTarget">0</span></div>
+
+                <div class="clear"></div>
+
+            </div>
+
+            <div id="tickTracker">
+            
+                <div id="currentTick" class="tick">
+                    
+                    <div id="currentTickLabel" class="tickLabel">Current (<span id="currentTickLabelTarget">0</span>)</div>
+
+                    <div id="currentTickActors" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextTick1" class="tick">
+                    
+                    <div id="nextTickLabel1" class="tickLabel">1</div>
+
+                    <div id="nextTickActors1" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextTick2" class="tick">
+                    
+                    <div id="nextTickLabel2" class="tickLabel">2</div>
+
+                    <div id="nextTickActors2" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextTick3" class="tick">
+                    
+                    <div id="nextTickLabel3" class="tickLabel">3</div>
+
+                    <div id="nextTickActors3" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextTick4" class="tick">
+                    
+                    <div id="nextTickLabel4" class="tickLabel">4</div>
+
+                    <div id="nextTickActors4" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextTick5" class="tick">
+                    
+                    <div id="nextTickLabel5" class="tickLabel">5</div>
+
+                    <div id="nextTickActors5" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextTick1" class="tick">
+                    
+                    <div id="nextTickLabel6" class="tickLabel">6</div>
+
+                    <div id="nextTickActors6" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div class="clear"></div>
+            
+            </div>
+
+            <div id="combatTrackerCombatants">
+            
+                <div id="combatantPC" class="combatant">
+                    
+                    <div id="combatantNamePC" class="combatantName">Sakuya</div>
+
+                    <div id="combatantWeaponPC" class="combatantWeapon"><strong>Weapon: </strong><span id="combatantWeaponTargetPC"></span></div>
+
+                    <div id="combatantArmourPC" class="combatantArmour"><strong>Armour: </strong><span id="combatantArmourTargetPC"></span></div>
+
+                    <div id="combatantDVPC" class="combatantDV"><strong>Best DV: </strong><span id="combatantDVTargetPC"></span></div>
+
+                    <div id="combatantWoundPC" class="combatantWound"><strong>Wound Penalty: </strong><span id="combatantWoundTargetPC">0</span></div>
+                
+                </div>
+            
+            
+                <div class="clear"></div>
+
+            </div>
+        
+        
+        </div>
+
+
+        <div id="socialTracker">
+        
+            <div id="socialTrackerHeader">
+
+                <div id="socialTrackerTitle">
+            
+                    <strong>Social Combat: <span id="socialTrackerTitleTarget"></span></strong>
+            
+                </div>
+
+                <div id="socialReactionCount"><strong>Reaction Count: </strong><span id="socialReactionCountTarget">0</span></div>
+
+                <div class="clear"></div>
+
+            </div>
+
+            <div id="socialTickTracker">
+            
+                <div id="currentSocialTick" class="tick">
+                    
+                    <div id="currentSocialTickLabel" class="tickLabel">Current (<span id="currentSocialTickLabelTarget">0</span>)</div>
+
+                    <div id="currentSocialTickActors" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextSocialTick1" class="tick">
+                    
+                    <div id="nextSocialTickLabel1" class="tickLabel">1</div>
+
+                    <div id="nextSocialTickActors1" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextSocialTick2" class="tick">
+                    
+                    <div id="nextSocialTickLabel2" class="tickLabel">2</div>
+
+                    <div id="nextSocialTickActors2" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextSocialTick3" class="tick">
+                    
+                    <div id="nextSocialTickLabel3" class="tickLabel">3</div>
+
+                    <div id="nextSocialTickActors3" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextSocialTick4" class="tick">
+                    
+                    <div id="nextSocialTickLabel4" class="tickLabel">4</div>
+
+                    <div id="nextSocialTickActors4" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextSocialTick5" class="tick">
+                    
+                    <div id="nextSocialTickLabel5" class="tickLabel">5</div>
+
+                    <div id="nextSocialTickActors5" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div id="nextSocialTick1" class="tick">
+                    
+                    <div id="nextSocialTickLabel6" class="tickLabel">6</div>
+
+                    <div id="nextSocialTickActors6" class="tickActors">&nbsp;</div>
+                
+                
+                </div>
+
+                <div class="clear"></div>
+            
+            </div>
+
+            <div id="socialTrackerCombatants">
+            
+                <div id="socialCombatantPC" class="combatant">
+                    
+                    <div id="socialCombatantNamePC" class="combatantName">Sakuya</div>
+
+                    <div id="socialCombatantAttackPC" class="combatantDV"><strong>Best Attack: </strong><span id="socialCombatantAttackTargetPC"></span></div>
+
+                    <div id="socialCombatantDVPC" class="combatantDV"><strong>Best MDV: </strong><span id="socialCombatantDVTargetPC"></span></div>
+
+                    <div id="socialCombatantAppearancePC" class="combatantDV"><strong>Appearance: </strong><span id="socialCombatantAppearanceTargetPC"></span></div>
+
+                    <div id="socialCombatantWillpowerPC" class="combatantWillpower"><strong>Current Willpower: </strong><span id="socialCombatantWillpowerTargetPC"></span></div>
+
+                    <div id="socialCombatantMIVPC" class="combatantMIV"><strong>Motivation/Intimacies/Virtues</strong></div>
+                
+                </div>
+            
+            
+                <div class="clear"></div>
+
+            </div>
+        
+        
+        </div>
+
+
+        <div id="currentResponse">
+        
+
+        
+        </div>
+
+        <div id="diceBox"></div>
+
+        <div id="currentActions">
+
+        
+        </div>
+
+
+        <div id="history"></div>
+
+        <div id="glossary">
+        
+            <div class="glossarySegment" id="glossaryNavMenu">
+            
+                <p><a href="#glossaryA">A</a> | <a href="#glossaryB">B</a> | <a href="#glossaryC">C</a> | <a href="#glossaryD">D</a> | <a href="#glossaryE">E</a> | <a href="#glossaryF">F</a> | <a href="#glossaryG">G</a> | <a href="#glossaryH">H</a> | <a href="#glossaryI">I</a> | <a href="#glossaryJ">J</a> | <a href="#glossaryK">K</a> | <a href="#glossaryL">L</a> | <a href="#glossaryM">M</a> | <a href="#glossaryN">N</a> | <a href="#glossaryO">O</a> | <a href="#glossaryP">P</a> | Q | <a href="#glossaryR">R</a> | <a href="#glossaryS">S</a> | <a href="#glossaryT">T</a> | <a href="#glossaryU">U</a> | <a href="#glossaryV">V</a> | <a href="#glossaryW">W</a> | X | Y | Z</p>
+
+                <p>Use Ctrl+F to search this page. | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryA" />
+
+                <h1>A</h1>
+
+                <h3>Ability</h3>
+
+                <p>A trait representing trained or cultivated capability rather than raw talent.  Abilities are rated from 0 to 5, with 2 representing professional level.  Most dice rolls are formed from a pool including one Attribute and one Ability.</p>
+            
+                <h3>Accuracy</h3>
+
+                <p>A weapon trait, added as a dice bonus to attack rolls with that weapon.</p>
+
+                <h3>Accuracy (as a pool)</h3>
+
+                <p>This tutorial sometimes uses this term to refer to the total of an attack pool.</p>
+
+                <h3>Action</h3>
+
+                <p>In general, any attempt by a character to achieve an atomic goal, usually adjudicated with a single dice roll.  In combat, a specific option you pick when your DV refreshes, with an associated Speed and DV penalty.</p>
+
+                <h3>Action (unit of time)</h3>
+
+                <p>The time between a character's DV refreshes.  For example, Cathak Vedara uses a Charm with a duration of 5 Actions.  It expires after her DV refreshes 5 times.</p>
+
+                <h3>Action Tick</h3>
+
+                <p>The tick on which your DV refreshes and you get to choose an action.  For example, if you take a Speed 5 action on tick 6, your next action tick is tick 11.</p>
+
+                <h3>Action Penalty</h3>
+
+                <p>When displaying penalties to a DV, this tutorial uses the term Action Penalty to distinguish the penalty caused by the character taking actions from other kinds.</p>
+
+                <h3>Aggravated Damage</h3>
+
+                <p>A type of damage distinguished from lethal damage mostly by the difficulty of healing it magically.  Represented as an asterisk * on the Health chart.  Aggravated soak is usually derived only from armour.</p>
+
+                <h3>Aim</h3>
+
+                <p>An action allowing a character to target an enemy and wait up to 3 ticks.  For each tick they wait, they gain a +1 die bonus to their first attack against the target on the tick the Aim ends.  You do not refresh DV when Aim ends, but may choose an Action as normal.</p>
+
+                <h3>Allies</h3>
+
+                <p>A background representing trusted friends of the character, with whom they have a reciprocal expectation of assistance.  Each dot usually represents one NPC of roughly equal power to the character, but they may be combined to represent a more powerful figure.</p>
+
+                <h3>Ancestor Worship</h3>
+
+                <p>Veneration of ancestors serves two practical purposes in <em>Exalted</em>.  Firstly, proper funeral rites are necessary to appease the cast-off lower souls of the dead, which remain behind in Creation and can be dangerous if angered.  Secondly, higher souls can linger as ghosts in the Underworld while awaiting reincarnation.  Sacrifice and prayer to the dead enriches and empowers them, allowing them to avoid enslavement and worse in the Underworld and occasionally help their pious relatives in Creation.  The Immaculate Order officially frowns on ancestor worship, but typically considers it a smaller problem than worship of gods.</p>
+
+                <h3>Anathema</h3>
+
+                <p>Immaculate name for the Celestial Exalted, particularly the Solars.  The Immaculates claim the Anathema are demons who stole power from the sky, consume the souls of mortals and inhabit their bodies; they once ruled the world as despots but were cast down by the valour of the Dragon Blooded host.  This belief is what fuels the Wyld Hunt, and while most mortals in the Threshold do not follow the Immaculate Faith, it's the only version of the story they've heard.</p>
+
+                <h3>Anima</h3>
+
+                <p>An aura of visible power caused by the expenditure of Peripheral Essence.  For Solar Exalted, this ranges from the glittering of their caste mark to a bonfire of sunlight up to a totemic image blazing above them, visible for miles around.  Dragon Blooded get an escalating series of elemental effects, causing damage to anyone nearby at the higher levels.  Anima displays make stealth difficult or impossible.</p>
+
+                <p>The levels are 1-3 motes of peripheral (glittering caste mark for Solars), 4-7 motes (burning caste mark for Solars), 8-10 motes (bright aura for Solars), 11-15 motes (Anima Power activates, bonfire for Solars), 16+ (totemic image).  These effects fade at the rate of one level per scene without Peripheral expenditure.</p>
+
+                <h3>Anima Power</h3>
+
+                <p>Each Exalt has a special power based on their caste or aspect.  This is called the Anima Power, as it is activated automatically and without cost when their anima reaches the 11+ motes.  It may be activated at any time by paying its normal cost.</p>
+
+                <h3>Appearance (social combat)</h3>
+
+                <p>Appearance acts as social high ground.  When attacked in social combat, the defending character applies a modifier equal to the difference between her Appearance and her attackers' to her MDVs (no more than +3, no less than -3).  For example, if Sakuya (Appearance 5) is attacked by Meiling (Appearance 3), she gains a +2 MDV bonus.  If Meiling is attacked by Sakuya, she takes a -2 MDB penalty.</p>
+
+                <h3>Artifact</h3>
+
+                <p>The magical equipment of the Exalted, usually made of the five magical materials.  Also the Background allowing their purchase.</p>
+
+                <h3>Aspect</h3>
+
+                <p>The Dragon Blooded are divided into five elemental aspects - Air, Earth, Fire, Water, and Wood.  Each aspect has a unique power, and a Dragon Blooded using a charm of an element other than their aspect must pay a one mote surcharge.  Celestial Exalted are similarly divided into castes.</p>
+            
+                <h3>Attack</h3>
+
+                <p>An action where the attacker attempts to harm the traits of the defender, typically via hitting them with a weapon and filling their health levels.  The Attack action has the most exacting timing in the game, though the full 10 steps of resolution are outside the scope of this tutorial and rarely all used anyway.  Typically boils down to the attacker trying to roll more successes than the defender's DV.</p>
+
+                <h3>Attribute</h3>
+
+                <p>A trait representing innate capability and talent.  Abilities are rated from 1 to 5, with 2 being human average.  Most dice rolls are formed from a pool including one Attribute and one Ability.</p>
+
+                <h3>Attunement</h3>
+
+                <p>Most artifacts require motes of essence to be committed to them before they can be used; this process is attunement.  It takes 20 minutes of contact with the artifact.  If the artifact is made of the Exalt's native magical material (e.g. it is jade and they are Dragon Blooded), they gain an additional benefit.  If it is not, they may double the number of motes committed in order to enjoy the material benefit.</p>
+
+                <h3>Automatic Success</h3>
+
+                <p>The ST may allow a player an automatic success on rolls where there's little chance of failure and thus little tension.  To qualify for an automatic success, you need a pool of 7 dice plus 3 dice for each point of difficulty above 1.  This only grants a threshold 0 success, so the player may choose to roll anyway.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryB" />
+
+                <h1>B</h1>
+
+                <h3>Backgrounds</h3>
+
+                <p>Traits representing a character's connections, position and possessions. Common examples include Resources, Allies, Contacts and Artifact.</p>
+
+                <h3>Bashing Damage</h3>
+
+                <p>The least severe form of damage, representing blunt trauma.  Represented as a / on the Health chart.  Killing a character with bashing damage is more difficult - if a character's Incapacitated health level is filled with bashing, each subsequent level of bashing damage &quot;wraps around&quot;, converting the highest existing level of bashing to lethal.  Only when the Incapacitated level is converted to lethal will subsequent bashing damage fill the Dying levels.</p>
+
+                <h3>Bleeding</h3>
+
+                <p>Any character who has taken lethal damage is bleeding, and will suffer one automatic level of lethal damage from blood loss every (Stamina) minutes.  Stanching a mortal's bleeding requires a Wits + Medicine roll for each wound, with a difficulty equal to the number of health levels inflicted in that wound (e.g. if Sakuya stabs a bandit for 2 lethal and then again for 3 lethal, that's a difficulty 2 and a difficulty 3 roll to stop the bleeding).  Exalts may make a reflexive Stamina + Resistance roll at difficulty 2 to will their bleeding to stop; they may attempt this on their action tick, or every five seconds outside combat.  Stopping an Exalt's bleeding with Medicine is automatically successful.</p>
+
+                <h3>Blessed Isle</h3>
+
+                <p>The continent at the centre of the (flat) world, containing the Pole of Earth and the Realm of the Dragon Blooded.</p>
+
+                <h3>Botch</h3>
+
+                <p>A roll showing no successes at all (that is all dice 6 or lower) and at least one die showing 1.  A disastrous failure, whose exact effects are determined by the ST.</p>
+
+                <h3>Breeding</h3>
+
+                <p>A Background exclusive to Dragon Blooded characters, representing the strength of their elemental inheritance.  Breeding gives a bonus to the size of both Personal and Peripheral mote pools, as well as increasing the chance that the character's children will Exalt.</p>
+                
+                <h3>Buff Jacket</h3>
+
+                <p>A sturdy leather coat, overlapping completely at the front to offer extra protection to the vitals.  Cheap, effective and stylish, they're extremely popular as armour.  The reinforced version incorporates metal plates for additional protection.</p>
+
+                <h3>Bull of the North (Yurgen Kaneko)</h3>
+
+                <p>A Dawn caste Solar Exalted who appeared amongst the Icewalker tribes of the far north and rose to command a gigantic conquering army.  Four years ago, with the aid of his powerful Circle, he obliterated the legions of House Tepet.  Solar PCs interested in warfare can expect to emulate or better his accomplishments.</p>
+                
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+
+
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryC" />
+
+                <h1>C</h1>
+
+                <h3>Caste</h3>
+
+                <p>Each type of Celestial Exalted is further divided into castes, reflecting the role or duties to which that Chosen is called.  For example the Dawn caste of the Solar Exalted are generals and warriors, and gain a power unique to their caste for use in battle.  The Dragon Blooded are likewise divided into elemental aspects.</p>
+
+                <h3>Caste Mark</h3>
+
+                <p>Celestial Exalted are marked with the symbol of their Caste, which is visible upon their forehead when their Anima flares.  For example, when Sakuya spends Peripheral Essence her brow blazes with the golden sunburst of the Dawn.</p>
+
+                <h3>Cathak, House</h3>
+
+                <p>A powerful and conservative military Dragon Blooded House, predominately Fire-aspected.  The stereotypical Cathak is brave, pious and happy to lay their life down for the Realm.  In this tutorial Cathak Vedara is a good example, Cathak Crimson Rain is a caricature of their worst traits, and Cathak Meiling is entirely atypical.</p>
+
+                <h3>Celestial Exalted</h3>
+
+                <p>The Chosen of the Celestial Incarna, the most powerful of gods.  Celestials are Chosen from amongst the most heroic of mortals, regardless of their bloodline.  They are few but mighty.  The Solar Exalted are more powerful than the Lunar or Sidereal Exalted, but all three are closer to each other than they are the Terrestrial Exalted.  Other Exalted of similar power - Abyssal, Infernal, Alchemical - are sometimes included in this classification.</p>
+
+                <h3>Chakram</h3>
+
+                <p>A sharp ring-shaped thrown weapon.  Cathak Vedara uses a special artifact version.</p>
+
+                <h3>Charms</h3>
+
+                <p>Specific magical techniques that channel Essence to achieve particular effects. Magical beings of all kinds use Charms, but usually only those specific to their type - Solar Exalted, Dragon Blooded and gods have different Charms and can't learn each others'.  Charms are usually associated with a particular Ability and may only be used to enhance uses of that Ability (for example Sakuya's <em>Bulwark Stance</em> is a Melee Charm and allows her to ignore penalties to her Parry DV but not her Dodge DV).</p>
+
+                <h3>Charms (timing)</h3>
+
+                <p>Simple Charms may only be used as your action on your action tick.  Extra Action Charms generate a magical flurry and must be used as your action on your action tick.  Supplemental Charms can only be activated to enhance an action, but you may activate as many relevant Supplemental Charms as you please.  Reflexive Charms may be activated at any time.</p>
+
+                <h3>Circle</h3>
+
+                <p>A group of closely allied Solar Exalted (ideally one of each caste).  Circles usually have something making them more than just an arbitrary collection of allies, such as closely aligned Motivations, shared history in past lives or a common destiny.  The concept is primarily useful as an in-setting means of describing a PC group.</p>
+
+                <h3>Commitment (motes of essence)</h3>
+
+                <p>Motes used to power a long-term effect (e.g. any Charm with a duration greater than Instant) or use an artifact are committed.  These motes are considered spent (and can't be used for anything else), but they can't be regained by any means until the effect they are powering ends.  The Exalt's mote pool is effectively smaller while the motes are committed.  For example, if Meiling commits 5 motes to use Earth Dragon Form, she can't stunt back those 5 motes until the scene ends and Earth Dragon Form's duration expires.</p>
+
+                <h3>Contacts</h3>
+
+                <p>A Background representing useful people the character knows, who would be prepared to trade favours and information.  Each dot usually represents a major, named contact, while the overall rating serves as bonus dice to locating useful people wherever you go.</p>
+
+                <h3>Coordinated Attack</h3>
+
+                <p>The Coordinate Attack miscellaneous action allows a commander to direct their troops to attack as one against a given opponent. The victim suffers a DV penalty against the coordinated attacks equal to the successes on the coordinating roll (Charisma + War, difficulty of half the number of attackers), up to the total number of attackers.  The coordinated attacks must take place on the commanding character's next action tick, so everyone else involved will typically need to Guard or Aim in order to be ready on the appropriate tick.</p>
+
+                <h3>Cult</h3>
+
+                <p>A Background representing worship of a character.  Worship can be harvested for Willpower points and motes, which is why gods are so keen to have it.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryD" />
+
+                <h1>D</h1>
+
+                <h3>Daiklave</h3>
+
+                <p>The signature weapon of the Exalted, an oversized sword made of one of the five magical materials.  Like other artifacts, a daiklave is miraculously light in the hands of the Exalted when attuned to their essence.  Sakuya uses a Reaper Daiklave, a faster variant.</p>
+
+                <h3>Damage (base)</h3>
+
+                <p>The damage of an attack before attack successes and other bonuses are added.  Usually (Strength + weapon's Damage)</p>
+
+                <h3>Damage (raw/pre-soak)</h3>
+
+                <p>The size of a damage pool before the defender's soak and similar penalties apply.  For weapon attacks it is (Strength + weapon's Damage + remaining successes on the attack roll).</p>
+
+                <h3>Damage (roll)</h3>
+
+                <p>Damage rolls are direct consequences of attack rolls and not full rolls in their own right - they cannot be stunted or boosted with Willpower points, and heroic characters do not count &quot;0&quot; twice for successes.  Each success inflicts a health level of damage on the target.</p>
+
+                <h3>Damage (weapon trait)</h3>
+
+                <p>For most weapons, a trait containing a dice bonus added to damage rolls made with this weapon and its type of damage.  For example, a daiklave with a damage trait of +5L inflicts lethal damage, and adds 5 damage dice to the wielder's Strength when calculating base damage.  Some weapons (such as firewands and cannon) have a flat base damage rather than adding a bonus (e.g. a successful firewand attack does 12 dice of lethal damage + attack successes, regardless of the wielder's traits).</p>
+
+                <h3>Dash</h3>
+
+                <p>An Action (Speed 3/DV -2) allowing a character to cover (Dexterity + 6 - wound penalty - mobility penalty yards) per tick.  May not be used in conjunction with Move.</p>
+
+                <h3>Defence (weapon trait)</h3>
+
+                <p>A dice bonus added to the pool used to calculate Parry DV when wielding the weapon.</p>
+
+                <h3>Dice</h3>
+
+                <p><em>Exalted</em> uses 10 sided dice (also known as d10s).  They are usually rolled in pools, where each dice showing 7 or higher is counted as a success, and the result of the roll is the total number of successes.  Heroic characters count the &quot;0&quot; or &quot;10&quot; face as two successes.</p>
+            
+                <h3>Dice Adder Cap</h3>
+
+                <p>An Exalt is limited in how much they can add to their pools with Charms.  A Solar cannot add more dice from any combination of Charms than the total of the Attribute + Ability forming the pool.  Dragon Blooded cannot add more than the Ability + any relevant specialties.  Successes count as two dice for this purpose.</p>
+
+                <h3>Difficulty</h3>
+
+                <p>The number of successes a roll must equal to be successful, usually 1.  Successes in excess of the difficulty are the threshold, and often confer some sort of bonus.</p>
+
+                <h3>Dodge DV</h3>
+
+                <p>A Defence Value used to avoid attacks by getting out of their way.  It's equal to half (Dexterity + Dodge - Mobility Penalty), rounded down for mortals and up for Exalted.  Characters with Essence greater than 2 add their Essence to the total before halving.</p>
+
+                <h3>Dodge MDV</h3>
+
+                <p>A (Mental) Defence Value used to resist arguments by simply ignoring their persuasive power.  It's equal to half (Willpower + Integrity + Essence), rounded down.</p>
+
+                <h3>Dragon Blooded</h3>
+
+                <p>The Chosen of the Elemental Dragons, also known as the Terrestrial Exalted.  The weakest of the Exalted, but overwhelmingly the most numerous, as their Exaltation is an inherited trait.</p>
+
+                <h3>DV (Defence Value)</h3>
+
+                <p>A static rating that acts like an external penalty to an attacker's roll against the character (subtracting successes).  DVs are derived from dice pools - they're effectively a roll opposing the attack, just with a pre-calculated average result.  Taking actions penalises your DVs until your next DV refresh.  DVs work like external penalties, but they are not vulnerable to </p>
+
+                <h3>DV Cap</h3>
+
+                <p>While caps on dice added by Charms vary, all characters can raise their DVs by the same amount: half the Attribute + Ability total for the pool.  This is mostly relevant for the Dragon Blooded, who can squeeze out an extra point or two of DV if they have appropriate Charms.</p>
+
+                <h3>DV Penalty</h3>
+
+                <p>While DVs can be subject to many sorts of penalties, this term generally refers to the penalty to a character's DVs caused by their own actions (e.g. Attack has a DV penalty of -1).  This tutorial uses the term Action Penalty to distinguish this usage from other types of penalty applying to DVs.</p>
+
+                <h3>DV Penalty (Charms)</h3>
+
+                <p>Charms that interact with DV penalties do not all interact with the same types.  <em>Protection of Celestial Bliss</em> prevents your attacks from accruing a DV penalty (Action penalty).  <em>Bulwark Stances</em> allows you to ignore all penalties to your DV from any source (Action penalty, wound penalties, onslaught penalties etc).  Read Charm descriptions carefully.</p>
+
+                <h3>DV Refresh</h3>
+
+                <p>When your action tick comes up in combat, any penalties to your DVs from your own actions are wiped.  You also receive a Willpower or mote reward for your highest rated stunt since your last DV refresh.</p>
+
+                <h3>Dying</h3>
+
+                <p>A character with damage in their Dying health levels takes an automatic level of lethal damage every time their action tick comes up, and must take the Inactive action.  Stabilising a Dying patient is a Wits + Medicine roll with a difficulty of (5 + the number of filled Dying levels).  Success heals all Dying levels and leaves the patient on Incapacitated.  Failure kills them.</p>
+
+                <h3>Dynast</h3>
+
+                <p>A member of the Scarlet Dynasty, and as such a nominal relative of the Scarlet Empress.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryE" />
+
+                <h1>E</h1>
+
+                <h3>Elevation</h3>
+
+                <p>In hand-to-hand fighting, the combatant with higher ground has an advantage.  This is represented with an adjustment to the defender's DVs based on their difference in elevation - a penalty if the attacker is higher, a bonus if the attacker is lower.  This adjustment is ignored by attackers using weapons with the Reach tag or ranged weapons.  Full rules are on page 147, Exalted 2nd Edition.</p>
+
+                <h3>Essence</h3>
+
+                <p>A trait measuring the cultivation of a character's soul; an indicator of their mystic power.  Mortals and animals have Essence 1, Exalted and the like have Essence 2 and above.  The Exalted raise their Essence trait to gain access to more powerful Charms and gain a higher mote capacity.  This trait is sometimes called "permanent Essence" to distinguish it from motes.</p>
+
+                <h3>Exalted</h3>
+
+                <p>Human heroes gifted with divine power and then left to their own devices to use it.  The Solar Exalted are the default player characters of the game, while the Dragon Blooded are the most numerous Exalted in the setting.</p>
+
+                <h3>Excellency</h3>
+
+                <p>A category of basic Charms available in every Ability that directly manipulate dice rolls.  The First Excellency always adds dice, the Second always adds successes and the Third allows a reroll, though the exact parameters depend on the Exalt type (Solar Excellencies are more expensive than Dragon Blooded but can add more dice/successes).  Excellencies must be bought separately for each Ability: Meiling knows First Martial Arts Excellency and First Presence Excellency, not a single Excellency for all her Abilities.</p>
+
+                <h3>Exceptional Equipment</h3>
+
+                <p>Exceptional equipment is more expensive than normal, but gains bonuses to its traits.  See pg 365 of Exalted 2nd Edition for details.  Note the Perfect Equipment on pg 366 has been removed by errata.</p>
+
+                <h3>External Penalty</h3>
+
+                <p>A penalty to a roll representing complications that make the task itself more difficult than normal (e.g. shooting an arrow through a blizzard).  An external penalty subtracts successes from the roll after rolling.</p>
+
+                <h3>Extra</h3>
+
+                <p>A mook.  Extras have only three health levels (-1, -3, Incapacitated) and are usually removed from play on Incapacitated.  They generally have poor traits and are never Heroic.</p>
+
+                <h3>Extra Action Charm</h3>
+
+                <p>A Charm that generates a magical flurry (typically with no multiple action penalties, ignoring Rate and a DV penalty equal to the highest amongst the actions rather than the total).  You may only activate one such Charm on your action tick.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryF" />
+
+                <h1>F</h1>
+
+                <h3>Fatigue</h3>
+
+                <p>A trait of armour, representing how exhausting it is to wear.  The ST may call for a Stamina + Resistance roll at Fatigue difficulty every 4 hours of game time (reduced by circumstances, down to a minimum of 30 minutes in the worst cases).  Failure applies a cumulative -1 internal penalty to all actions from exhaustion.</p>
+
+                <h3>Favoured</h3>
+
+                <p>If a character Favours an Ability, they gain a discount on the purchase of dots, specialties and Charms for that Ability.  Solars automatically favour the five abilities associated with their Caste and may choose five more.</p>
+
+                <h3>Feat of Strength</h3>
+
+                <p>An attempt to lift, break or throw something with raw strength, adjudicated from the size of the character's Strength + Athletics pool.  Full rules on page 127, Exalted 2nd Edition.</p>
+
+                <h3>First Action</h3>
+
+                <p>The tick on which you have your first DV refresh and choose your first Action for a combat.  Determined by comparing your Join (Battle/Debate/War) roll to the Reaction Count.</p>
+
+                <h3>First Age</h3>
+
+                <p>The long era between the end of the Primordial War and the beginning of the Shogunate, during which the Solar Exalted ruled Creation.</p>
+
+                <h3>Forsaken</h3>
+
+                <p>Pejorative term for the Dawn caste, used by the Immaculate Order.</p>
+
+                <h3>Flurry</h3>
+
+                <p>A type of action allowing multiple actions on the same tick.  A flurry has a Speed equal to the slowest action in the flurry, and a DV penalty equal to the sum of all actions taken.  Multiple action penalties apply to all actions in the flurry.  Some actions, such as Aim, Guard and Simple Charms may not be included in a flurry.  A weapon may not be used to attack more times than its Rate in a flurry.</p>
+
+                <h3>Flurry (magical)</h3>
+
+                <p>A flurry generated by magic (such as an Extra Action Charm) typically has no multiple action penalties, ignores Rate and has a DV penalty equal to the highest amongst the actions, not the total.  The number of actions in such a flurry is usually set by the power creating it.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryG" />
+
+                <h1>G</h1>
+
+                <h3>Gods</h3>
+
+                <p>Divine spirits, ranging from the almighty Unconquered Sun to the non-sentient god of an indiviudal pebble.  Most intelligent gods have jobs in the Terrestrial or Celestial Bureacracy, and are supposed to subsist on their salary rather than mortal worship.  In this chaotic age, most gods in Creation cheerfully run protection rackets to enrich themselves with prayer, unless the Immaculate Order or a similar power stops them.</p>
+
+                <h3>Great Curse</h3>
+
+                <p>The Exalted were created to cast down the Primordials, and were victorious.  The dying titans cursed their conquerors, a subtle and terrible curse that has shaped the course of history ever since.  All the Exalted suffer the Great Curse, but particularly the Solars.  Combined with the natural effects of absolute power, it slowly poisoned their reign over the long First Age, driving them to hubris and worse. For Solar characters, the Great Curse manifests as the Limit Break.</p>
+
+                <h3>Guard</h3>
+
+                <p>An Action allowing a character to wait up to 3 ticks without DV penalty.</p>                
+                
+                <h3>Guild</h3>
+
+                <p>International economic alliance of (mostly) mortal merchants.  The only global economic power besides the Realm, given to ruthless profiteering.</p>
+
+                
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryH" />
+
+                <h1>H</h1>
+
+                <h3>Hardness</h3>
+
+                <p>A static rating applied as a hurdle which a damage pool must overcome to apply.  If the raw damage is higher than the hardness rating, hardness is ignored and the attack soaked normally.  If it is equal or lower, the attack is ignored.</p>
+
+                <h3>Health (level)</h3>
+
+                <p>Each character has multiple health levels, represented as empty boxes on their character sheet.  Each level of damage they take fills one of those boxes, and the character takes the wound penalty listed next to their lowest filled box.  More severe damage pushes less severe down the chart (e.g. lethal damage pushes down bashing).   Damage is healed from the bottom up, so the least severe wounds are always healed first.</p>
+
+                <p>Mortals heal one level of bashing damage per 12 hours of rest; Exalted one per 3 hours.  Lethal and aggravated damage take longer, see page 149 of Exalted Second Edition.</p>
+
+                <h3>Hero / Heroic</h3>
+
+                <p>The state of being a hero in <em>Exalted</em> is not moral.  In the setting it is the condition of being larger than life, with the drive and ability to change the world.  In the game, it is a game trait that confers various benefits, principally the ability to stunt and a bonus success for each dice in a roll showing &quot;0&quot;.</p>
+
+                <h3>High Realm</h3>
+
+                <p>The language of the Dragon Blooded nobility of the Realm, used for all official business.  The corresponding Low Realm is spoken by peasants.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryI" />
+
+                <h1>I</h1>
+
+                <h3>Immaculate Faith/Immaculte Order</h3>
+
+                <p>The religion of the Realm.  Teaches that Dragon Blooded are elemental bodhisattvas who have earned Exaltation over many reincarnations, and that the Celestial Exalted are &quot;Anathema&quot;, demons who devour the souls of mortals and inhabit their bodies.  The Immaculates heavily regulate worship in areas of Realm influence, preventing gods from maintaining personal cults - at daiklave-point if need be.</p>
+
+                <h3>Immaculate Martial Arts</h3>
+
+                <p>Celestial-level Martial Arts Charm trees specifically designed for use by Dragon Blooded, provided by their hidden Sidereal Exalted patrons.  These are the most powerful combat Charms a Dragon Blooded can learn, and as such many secular Dynasts will attend religious school and subject themselves to gruelling monastic discipline to gain that power for their families.</p>
+
+                <h3>Inactive</h3>
+
+                <p>An involuntary Action that you must take when your character is unable to take any other actions (e.g. they are unconscious or helpless).  It has a Speed of 5, and sets the character's DVs to 0.</p>
+
+                <h3>Incapacitated</h3>
+
+                <p>When a character's Incapacitated health level is filled with damage, they must take the Inactive action on every action tick.</p>
+
+                <h3>Infection</h3>
+
+                <p>A deadly problem for mortals, an annoyance for the Exalted.  Rules are on page 151, Exalted 2nd Edition.</p>
+
+                <h3>Influence</h3>
+
+                <p>A background representing political and social power.</p>
+
+                <h3>Internal Penalty</h3>
+
+                <p>A penalty to a roll, reflecting circumstances that impair the character's ability (for example wound penalties).  An internal penalty removes dice from the pool before rolling.</p>
+
+                <h3>Intimacy</h3>
+
+                <p>A class of traits representing things that the character cares about - causes, concepts, people, places etc.  They are important in social combat:  an attack supporting an intimacy on the target levies a -1DV penalty, while contradicting one give a +1DV bonus.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryJ" />
+
+                <h1>J</h1>
+
+                <h3>Jade</h3>
+
+                <p>The most common magical material, associated with the Dragon Blooded.  Comes in five colours corresponding to the five elements.  Improves the Speed of weapons and the Fatigue of armour.</p>
+
+                <h3>Join Battle</h3>
+
+                <p>A Wits + Awareness roll made at the start of combat.  The highest number of successes is the Reaction Count - that character acts on tick 0.  Everyone else acts on tick (Reaction Count - their successes), to a maximum of tick 6.  Characters who botch act on tick 6 regardless of Reaction Count.</p>
+
+                <h3>Join Debate</h3>
+
+                <p>Exactly like Join Battle, only for social combat.</p>
+
+                <h3>Jumping</h3>
+
+                <p>A heroic character can jump their Strength + Athletics - Mobility penalty in yards vertically, or twice that horizontally.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryK" />
+
+                <h1>K</h1>
+
+                <h3>Kukla</h3>
+
+                <p>Here's what you need to know about the Kukla:  don't release the Kukla.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryL" />
+
+                <h1>L</h1>
+
+                <h3>Lethal Damage</h3>
+
+                <p>Cutting and piercing trauma, represented with a X on the Health chart.  A character subjected to lethal damage is bleeding.</p>
+
+                <h3>Limit Break</h3>
+
+                <p>A Solar builds up Limit under the conditions of their Virtue Flaw.  At 10 points, they suffer a Limit Break, and are compelled to act out the behaviour stipulated by their Flaw.  They gain Willpower points equal to their rating in the relevant Virtue, which may take them over their normal limit.  Forgoing this bonus Willpower allows the Break to be partially controlled, as described in the Virtue Flaw.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryM" />
+
+                <h1>M</h1>
+
+                <h3>Magical Materials</h3>
+
+                <p>Five special materials from which Artifacts can be constructed, each associated with a particular type of Exalted.  Jade (Dragon Blooded), Orichalcum (Solar), Moonsilver (Lunar), Starmetal (Sidereal) and Soulsteel (Abyssal).</p>
+
+                <h3>Makai</h3>
+
+                <p>A city-state on the northern coast of the Inner Sea; a tributary to the Realm.  It's not canonical, but is a good example of the sorts of kingdoms you can trivially slot into the vast empty spaces on Creation's map.</p>
+
+                <h3>Martial Arts (Ability)</h3>
+
+                <p>A combat ability covering unarmed fighting and the use of both improvised and special Martial Arts weapons.  Does not imply use as being culturally martial arts - a tavern brawler uses Martial Arts without being a martial artist; Sakuya is a wuxia-esque martial artist while using Melee.</p>
+
+                <h3>Martial Arts (Charms)</h3>
+
+                <p>Because Martial Arts wasn't already confusing enough, Martial Arts Charms are a special type of combat magic shared between the Exalt types, vaguely similar to Sorcery.  This is why Dragon Blooded can learn Celestial-level Martial Arts Charms; it's also why most Martial Arts Charms available to Solars simply aren't as good as their native Solar Charms.  Solar Hero Style is a Martial Arts tree available to Solars at their normal power level.</p>
+
+                <h3>MDV</h3>
+
+                <p>A Defence Value used to oppose social attacks.</p>
+
+                <h3>Miscellaneous Action</h3>
+
+                <p>A catch-all for various contextual or minor Actions that don't fit into the established categories.  Miscellaneous actions default to Speed 5, DV -1 (DV -2 in social combat).  Standard miscellaneous actions include readying a weapon or reading motivation.</p>
+
+                <h3>Mobility Penalty</h3>
+
+                <p>A trait of armour, representing how restrictive it is to a character's movements.  Applies as a dice penalty to actions requiring full body movement (including Dodge DV) and is applied directly to movement rates.</p>
+
+                <h3>Mon</h3>
+
+                <p>An icon identifying a family or organisation.</p>
+
+                <h3>Motes (of essence)</h3>
+
+                <p>The spendable form of Essence, used to pay the activation cost of Charms and other powers. Regained by stunts and rest.</p>
+
+                <h3>Motivation</h3>
+
+                <p>A character's primary goal, the cause that gives them the drive to be a hero.  Motivation is important in social combat: an attack supporting the target's Motivation levies a -3 MDV penalty, while one contradicting it gives a +3 MDV bonus.</p>
+
+                <h3>Move</h3>
+
+                <p>A reflexive action that may be taken once per tick, allowing a character to cover (Dexterity - wound penalty - mobility penalty) yards per tick.  May not be used in conjunction with Dash.</p>
+
+                <h3>Multiple Action Penalties</h3>
+
+                <p>When taking multiple actions simultaneously (e.g. with a flurry), the first action takes a dice penalty equal to the total number of actions, and each subsequent action takes a further cumulative one die penalty.  For example, three actions would be -3, -4 and -5.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryN" />
+
+                <h1>N</h1>
+
+                <h3>Natural Mental Influence (NMI)</h3>
+
+                <p>A normal attempt to influence a character through persuasion and argument.  Most social attacks are NMI, even when enhanced by Charms.  A character hit by an NMI social attack may resist it at the cost of 1 Willpower point + 1 Willpower point per three full successes remaining on the attack roll.  Having done so, they are immune to NMI from their attacker for the remainder of the scene, and anyone else using NMI on them for that scene suffer an internal penalty equal to the character's Integrity.</p>
+
+                <h3>NPC (Non Player Character)</h3>
+
+                <p>An inhabitant of the game world played by the ST rather than a player; that is, not a protagonist.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryO" />
+
+                <h1>O</h1>
+
+                <h3>Onslaught Penalty</h3>
+
+                <p>When a target is attacked multiple times in a single flurry, a cumulative 1 point Onslaught penalty is applied to their DVs on every attack past the first.  This applies only to attacks from that flurry.  For example, Sakuya and Meiling both attack a Deathknight on the same tick.  Sakuya makes a flurry of four attacks, Meiling strikes a single blow.  The Deathknight suffers a -1 Onslaught penalty to DVs against Sakuya's second attack, -2 on her third and -3 on her fourth.  He does not suffer an Onslaught penalty on Meiling's attack, as it is not part of Sakuya's flurry.</p>
+
+                <h3>Old Realm</h3>
+
+                <p>The language of the Celestial-ruled Realm before the Shogunate; also the native language of gods and demons.</p>
+
+                <h3>Orichalcum</h3>
+
+                <p>The golden magical material of the Solar Exalted.  Improves Accuracy, Defence and Rate of weapons, Soak and Hardness of armour.</p>
+
+                <h3>Overwhelming</h3>
+
+                <p>A weapon tag.  An attack with a weapon with an Overwhelming rating uses that rating as its post-soak minimum damage dice.  For example, Meiling's grand goremaul has Overwhelming 3.  If she attacks a Third Circle Demon with 40 soak and only does 30 raw damage, she'd still roll 3 damage dice.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+        
+            <div class="glossarySegment">
+            
+                <a name="glossaryP" />
+
+                <h1>P</h1>
+
+                <h3>Parry DV</h3>
+
+                <p>A Defence Value used to oppose attacks by deflecting them with your weapon.  It's equal to half (Dexterity + Melee/Martial Arts + the weapon's Defence), rounded down for mortals and up for Exalts.</p>
+
+                <h3>Parry MDV</h3>
+
+                <p>A (Mental) Defence Value used to oppose social attacks by argument and rebuttal.  It's equal to half (Charisma/Manipulation + Investigation/Performance/Presence), rounded up.</p>
+
+                <h3>Peripheral Essence</h3>
+
+                <p>Motes spent from a character's Peripheral pool (typically the larger of the two) cause the character's Anima to flare.</p>
+
+                <h3>Personal Essence</h3>
+
+                <p>Motes spent from a chacter's Personal pool (typically the smaller of the two) do not cause the character's Anima to flare.</p>
+
+                <h3>Player</h3>
+
+                <p>While technically everyone at the table is a player, the term is usually used to distinguish those playing the protagonists from the ST.</p>
+
+                <h3>PC (Player Character)</h3>
+
+                <p>One of the protagonists, controlled by a player.  In most groups each player will have one and only one PC, who they alone control.  Other groups might use multiple PCs per player, pass them around etc.</p>
+
+                <h3>Prince of the Earth</h3>
+
+                <p>An Exalt.  The title recognises their authority over Creation via the Mandate of Heaven.  In the modern day it's typically synonymous with the Dragon Blooded, but older entities will address Celestial Exalted in this fashion.</p>
+
+                <h3>Primordials</h3>
+
+                <p>The creators of Creation, cast down by the Exalted at the behest of their divine patrons.  Some are dead, some are sealed eternally in hell.  They are strange and epic creatures, made stranger still by their defeat.</p>
+
+                <h3>Prophecy</h3>
+
+                <p>Unreliable prophecy is available to mortal astrologists.  Sidereal Exalted have access to better, but usually prefer to simply arrange for their favoured &quot;predictions&quot; to come true via their powers and Heavenly connections.  Heroes, and PCs in particular, stomp all over prophecies of both kinds.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryR" />
+
+                <h1>R</h1>
+
+                <h3>Rate</h3>
+
+                <p>A weapon cannot be used more times in a flurry than its Rate.  Some magical flurries ignore this restriction.</p>
+
+                <h3>Read Motivation</h3>
+
+                <p>An action (specifically a Miscellaneous action when used in social combat) allowing a (Perception + Investigation/Socialise) roll against a difficulty of half the target's (Manipulation + Socialise), rounded up.  Success allows the acting character to determine the target's dominant motivation, or whether their last statement was a lie.  Rolling twice the difficulty in successes, the character may learn one Intimacy the target has demonstrated during the scene.</p>
+
+                <h3>Realm, The</h3>
+
+                <p>The Dragon Blooded society directly ruling the Blessed Isle and indirectly much of the rest of Creation.  The Realm owes its current form to the nearly 800 year reign of the Scarlet Empress; today it is synonymous with her Dynasty.</p>
+
+                <h3>Reach</h3>
+
+                <p>A weapon tag that allows the weapon to ignore elevation modifiers to DV.</p>
+
+                <h3>Reaction Count</h3>
+
+                <p>The highest number of successes amongst all participants in a Join (Battle/Debate/War etc) roll-off.  This number is recorded so that anyone joining later can roll against it to determine how many ticks they have to wait before acting (i.e. equal or better the Reaction Count and act straight away, otherwise wait a number of ticks equal to the successes you were short).</p>
+
+                <h3>Reestablish Surprise</h3>
+
+                <p>A miscellaneous action allowing a character to hide during a combat.  The character rolls Dexterity + Stealth, while all witnesses make a Wits + Awareness + 2 roll.  Any witness who equals or the character's total know her location, while any who do not are subject to Unexpected attacks from her.</p>
+
+                <h3>Reflexive (action)</h3>
+
+                <p>A roll or other action that is granted freely to the character in response to the events of play - it has no Speed or DV penalty, does not suffer or cause multiple action penalties etc.</p>
+
+                <h3>Reflexive (Charm)</h3>
+
+                <p>A Charm that may be activated at any time.  Activating the Charm is a reflexive action, and it may or may not grant a reflexive action itself.</p>
+
+                <h3>Riverspeak</h3>
+
+                <p>The trade language of the East, spread across the world by the Guild.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryS" />
+
+                <h1>S</h1>
+
+                <h3>Satrap</h3>
+
+                <p>A representative of the Realm appointed to manage one of its tributaries.  Their duty is to ensure the prompt payment of tribute and to advise the local ruler.  Few rulers are secure enough to ignore such "advice".</p>
+
+                <h3>Scarlet Dynasty</h3>
+
+                <p>The Scarlet Empress' extended family, now comprising most of the Realm's Dragon Blooded after centuries of marriage and expansion.  Comprised of the eleven Great Houses.  In the Empress' absence, they stand on the brink of civil war.</p>
+
+                <h3>Scarlet Empress</h3>
+
+                <p>The rule of the Realm (and by extension most of Creation) since the fall of the Shogunate nearly eight centuries ago.  The Empress gained power by seizing the long-abandoned magical defence network of the Solar Exalted, using it first to save Creation from the Fair Folk and then turning it upon any who would defy her.  She proved a remarkably skillful ruler, presiding over a less glorious but more stable empire than any Shogun had.  She engineered her government to depend on her utterly - when she disappeared five years ago the course of the Realm was set to inevitable civil war.</p>
+
+                <h3>Scene</h3>
+
+                <p>A contiguous block of in-game time, closely analogous to a scene in a film or play.  A combat or social combat is usually a scene to itself (and never multiple scenes).  Scenes end whenever the group agrees they do, usually when they want to skip over time to get to the next interesting bit.  In the tutorial each scene is physically distinct (Shrine --> Dojo --> Lily's etc), but this isn't compulsory.</p>
+                
+                <h3>Session</h3>
+
+                <p>A contiguous block of real-world time in which the group gathers to play, usually 3-4 hours.</p>
+
+                <h3>Shinichi</h3>
+
+                <p>Sakuya's ex-brother-in-law.  Married to Toyohime, the sister of Sakuya's ex-wife Kaguya.  I thought someone might care about their exact relation?</p>
+
+                <h3>Shogunate</h3>
+
+                <p>The first world government of the Dragon Blooded, created in the wake of their successful rebellion against the Celestial Exalted.   The Shogunate was far larger than the present-day Realm, but less stable, and ultimately it proved unequal to the task of maintaining the world left behind by the murdered Solar Exalted.  Its came to a disastrous end when the Great Contagion and the Fair Folk invasion claimed 90% of Creation's inhabitants and 50% of its landmass.</p>
+
+                <h3>Sidereal Exalted</h3>
+
+                <p>Celestial Exalted, the Chosen of the Five Maidens.  Engineers of fate, supreme martial artists and harried bureaucrats of Heaven, Sidereal influence is powerful in Creation but rarely recognised.  A faction of Sidereal Exalted is responsible for the auguries of Solar Exaltations that direct the Wyld Hunt, though a second faction opposes them on the Solars' behalf.  Games in which the Sidereals are not important generally assume these factions cancel each other out.</p>
+
+                <h3>Simple Charm</h3>
+
+                <p>A Charm that is activated as an Action, by default with Speed 6, DV - 1.  Only one such charm may be activated on your action tick, unless it is combined with a valid Extra Action Charm, in which case the Simple Charm must be activated on every action granted by the magical flurry.  This is rarely useful outside attacks.</p>
+
+                <h3>Skytongue</h3>
+
+                <p>The language family of the North.</p>
+
+                <h3>Soak</h3>
+
+                <p>A static rating derived from Stamina and armour, applied as a dice penalty to a damage roll.  Soak cannot reduce a damage pool below 1 die (or the Overwhelming rating of the attacking weapon).  A character has three soak values, one for each of Bashing, Lethal and Aggravated damage.  All characters gain their full Stamina as Bashing Soak.  Exalted gain half their Stamina, rounded down, as Lethal Soak.</p>
+
+                <h3>Solar Exalted</h3>
+
+                <p>The Chosen of the Unconquered Sun.  The most powerful Exalted, chosen from the very greatest mortal heroes.  Solars embody excellence, not morality; while they are often righteous and virtuous, they are not required to be.  All that is needed to be Chosen as a Solar is surpassing potential and the drive to change the world.  Solars lead the Exalted in the war against the Primordials, and were gifted with the rule of Creation after their victory.  After a long age of wonders, the Great Curse corrupted them, provoking the Dragon Blooded to cast them down.  Few were seen in the many centuries until the disapearance of the Scarlet Empress, when they began suddenly to Exalt all across Creation, god-kings returned to the world in a blaze of glory.</p>
+
+                <h3>Sorcery</h3>
+
+                <p>Large scale magic, generally of little use in combat and outlandishly expensive in motes.  All Exalted share the Terrestrial Circle of Sorcery, all Celestials the Celestial Circle, while the Solar Circle is the exclusive preserve of the Chosen of the Unconquered Sun.  Does not appear in this tutorial.  Investing in Sorcery as a Solar player is very precisely an investment:  you will be less powerful than your Circle for most of the game, until you can afford Solar Circle Sorcery and start playing with the setting like a kitten with a ball of string.</p>
+
+                <h3>Specialty</h3>
+
+                <p>An area of focus within an Ability granting bonus dice when appropriate.  For example, a character with 3 dots in the Melee specialty &quot;Swords&quot; would gain three bonus dice to any roll to use a sword with the Melee Ability (but not for rolls involving swords with other Abilities, like making them with Craft).  A character may only have three dots total of specialties for each Ability. </p>
+
+                <h3>Speed</h3>
+                
+                <p>The number of ticks before the character can act again after taking the relevant action, ranging from 3 to 6.  The Attack action derives its Speed from the Speed trait of the weapon used.</p>
+
+                <h3>Story</h3>
+
+                <p>A loose unit of time; a contiguous block of sessions usually describing the characters' attempt at achieving some primary goal.  The end of a Story is decided by the ST, but should be obvious to everyone.  The tutorial would be a single (short) Story for Sakuya, as at the end she's decisively moving on to a new challenge.</p>
+
+                <h3>ST (Storyteller)</h3>
+
+                <p>The Game Master; that is the player responsible for describing the world and its NPC inhabitants, ajudicating the rules and usually organising the date and time of the game.  &quot;Storyteller&quot; is just the White Wolf house term for GM, it doesn't imply they have the sole active role while the players listen, especially in an Exalted context.  That being said, in most groups the division of labour means the GM must do prep work for the game while the players just show up and have fun; in such arrangements it's traditional to ensure the GM never lacks for food or drink.</p>
+
+                <h3>Study</h3>
+
+                <p>Aim for social combat.</p>
+
+                <h3>Stunts</h3>
+
+                <p>Stunts are the description of an action in a novel way that interacts with the scenery or ongoing drama of a scene.  The player is rewarded with bonus dice for their roll, and either a Willpower point or motes of essence for their character (this resource reward is only given once per DV refresh in combat).</p>
+
+                <p>A <strong>1 die</strong> stunt is any novel description - as long as the player is not repeating herself and is making any embellishment at all, she should get the die.  The resource reward is two motes of essence.</p>
+
+                <p>A <strong>2 dice</strong> stunt is a 1 die stunt that also describes interaction with the scenery or riffs off something that happened earlier in the scene.  Players should aim to get 2 dice stunts on most actions, as they require only a short, interactive description.  The resource reward is 4 motes of essence or one Willpower point.</p>
+
+                <h3>Surprise Attack</h3>
+
+                <p>A surprise attack/ambush requires rolling Dexterity + Stealth against the victim's Wits + Awareness before rolling Join Battle.  If the attacker scores more successes, they may launch an Unexpected attack.  Otherwise Join Battle is rolled normally.  This also works in social combat, though the relevant pools are Manipulation + Socialise vs Perception + Investigation.</p>
+
+                <h3>Supplemental Charm</h3>
+
+                <p>Charms of this type enhance an action, and can only be activated in conjunction with an appropriate action.  You may activate as many appropriate Supplemental Charms as you please on a given action.  You may not activate a Supplemental Charm multiple times to benefit a single action.</p>
+
+                <h3>Surrounding</h3>
+
+                <p>If there is space for five attackers around a target, they may surround her.  A surrounded character must choose one opponent to show her back to - attacks from that opponent are considered Unexpected.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryT" />
+
+                <h1>T</h1>
+
+                <h3>Tepet, House</h3>
+
+                <p>Formerly one of the great military powers of the Realm of the Dragon Blooded.  Its legions were utterly destroyed by the Bull of the North four years ago, leaving the House in ruins.  The survivors are undertaking a desperate program of rebuilding, hoping to renew their fortunes in the coming civil war.</p>
+
+                <h3>Tetsubo</h3>
+
+                <p>A great wooden club reinforced with iron.  Meiling's artifact weapon resembles a testubo, though in mechanical terms it's properly known as a grand goremaul.</p>
+
+                <h3>Terrestrial Exalted</h3>
+
+                <p>The Dragon Blooded.  As opposed to the Celestial Exalted.</p>
+
+                <h3>Threshold</h3>
+
+                <p>Any successes on a roll in excess of the difficulty.  Often confer some sort of bonus.</p>
+
+                <h3>Threshold, The</h3>
+
+                <p>The rest of Creation outside the Blessed Isle.  Sakuya's story takes place in a nation in the northern Threshold.</p>
+
+                <h3>Tick</h3>
+
+                <p>A tick is an arbitrary atomic unit of time for combat scenes.  Standard combat uses ticks assumed to be roughly 1 second in length.  Social combat and War use ticks assumed to be 1 minute in length.  Stunts play merry hell with both numbers.</p>
+
+                <h3>Tiger Warriors</h3>
+
+                <p>Super-elite mortal troops personally trained by a Solar Exalted using a specific instruction Charm.</p>
+
+                <h3>Type</h3>
+
+                <p>Indicates what sort of being a character is - Solar Exalted, Dragon Blooded, Heroic Mortal etc.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryU" />
+
+                <h1>U</h1>
+
+                <h3>Unconquered Sun</h3>
+
+                <p>The mightiest of the gods and ruler of Heaven.  He embodies the four cardinal Virtues and the principle of excellence, and is the patron of the Solar Exalted.</p>
+
+                <h3>Unexpected Attack</h3>
+
+                <p>A character subjected to an unexpected attack has their DVs reduced to 0 against that attack.  This usually happens when the attacker was hidden, or the defender was surrounded and obliged to show her back to one of her attackers.</p>
+            
+                <h3>Unnatural Mental Influence</h3>
+
+                <p>Certain powerful magical social attacks do not follow the NMI resistance rules.  The Charm or power that generated the attack specifies the number of Willpower points that must be spent to resist it, and what protection (if any) that extends against subsequent uses of the attack during that scene.  UMI does not appear in this tutorial.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryV" />
+
+                <h1>V</h1>
+
+                <h3>Venus</h3>
+
+                <p>The Maiden of Serenity, one of the Celestial Incarna and a patron of the Sidereal Exalted.  Thematically similar to the Venus/Aphrodite of classical myth.</p>
+
+                <h3>Virtue (activation)</h3>
+
+                <p>Activating a Virtue costs 1 Willpower point and adds bonus dice equal to the Virtue's rating to a roll.  This may only be done a number of times equal to the Virtue's rating per story, tracked by marking the boxes on the character sheet.</p>
+
+                <h3>Virtue (trait)</h3>
+
+                <p>A type of trait representing a character's passions and drive towards certain kinds of behaviour.  High Virtues exert a compulsion - to contradict the demands of one rated 3 or higher requires failing a roll of the Virtue or spending a Willpower point.  Low Virtues do not compel (a Temperance 1 character is not required to be an addict).</p>
+
+                <h3>Virtue Flaw</h3>
+
+                <p>A flaw introduced into a Solar's character by the Great Curse.  A Virtue Flaw is associated with a Virtue that the character has at 3 or more, and describes the terms of their Limit Break.  For example, Sakuya has Foolhardy Contempt, associated with Valor.  She gains Limit when fighting against losing odds, being challenged to single combat or otherwise having an opportunity to prove her bravery.  On a Limit Break she must hurl herself into danger without consideration of odds, and cannot retreat under any circumstances.  Unkind souls might suggest this describes Sakuya's normal behaviour anyway ;)</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+
+            <div class="glossarySegment">
+            
+                <a name="glossaryW" />
+
+                <h1>W</h1>
+
+                <h3>Willpower (trait)</h3>
+
+                <p>A trait representing a character's self-control and determination.  Unlike most traits, it is rated from 1 to 10 and is rarely rolled.  Willpower contributes to the Dodge MDV and sets the size of the character's pool of Willpower points.</p>
+
+                <h3>Willpower (points)</h3>
+
+                <p>The spendable version of Willpower.  Resisting compulsions (including social combat attacks and the demands of Virtues) costs willpower points.  Some Charms and other powers include Willpower points in their costs.  One point may be spent to add an automatic success to a roll, or to activate a Virtue and add its rating in dice.  Willpower points are regained primarily by stunting and rest.</p>
+
+                <h3>Winter Tiger School</h3>
+
+                <p>A non-canonical martial arts school in Makai.  It principally teaches the Melee ability (uncapitalised martial arts being a setting aesthetic rather than a mechanical distinction).</p>
+
+                <h3>Wound Penalty</h3>
+
+                <p>A character's wound penalty is equal to the number beside their lowest filled health level (if it's a word and not a number, they have worse problems).  The wound penalty applies to all actions as a dice penalty, and applies directly to DVs and movement rates.</p>
+
+                <h3>Wyld Hunt</h3>
+
+                <p>Any large party of Dragon Blooded organised to hunt an &quot;Anathema&quot; or similar threat.  Due to the support of the All Seeing Eye and the Immaculate Order the Wyld Hunt can be thought of as a permanent institution, but individual Hunts are drawn from whoever is available and willing.  The Hunt successfully suppressed the few Solars that emerged during the Shogunate and the Scarlet Empress' reign, forewarned by extremely accurate prophecies of their appearance.  Since her Imperial Majesty's disapearance, vastly more Solars have Exalted, stretching its resources to breaking point.  Once akin to a sporting event, signing up with the Hunt is now desperately dangerous, and many Dynasts are finding excuses not to go.  Solar PCs can expect to face Wyld Hunts in their early careers, but can also expect a chance to defeat them.</p>
+
+                <p><a href="#top">Back to top</a> | <a href="#" class="leaveGlossaryLink">Back to game</a></p>
+            
+            </div>
+        
+        </div>
+
+        <div id="historyGlossaryMenu">
+        
+            <div id="historyButton" class="menuButton menuButtonDouble">
+                
+                Page History
+
+            </div>
+
+
+            <div id="glossaryButton" class="menuButton menuButtonDouble">
+                
+                Glossary
+
+            </div>
+        
+        <div class="clear"></div>
+
+        </div>
+
+
+        <div id="menu">
+        
+            <div id="saveAndQuit" class="menuButton">
+                
+                Save &amp; Quit
+
+            </div>
+
+
+            <div id="save" class="menuButton">
+                
+                Save Game
+
+            </div>
+
+            <div id="load" class="menuButton">
+                
+                Load Game
+
+            </div>         
+            
+            <div id="toggleCharacterSheet" class="menuButton">
+                
+                Toggle Character Sheet
+
+            </div>   
+        
+        <div class="clear"></div>
+
+        </div>
+
+        <div id="characterSheet">
+            
+            <div id="characterSheetHeading" class="characterSheetSection">
+
+                <div id="characterSheetName" class="characterSheetHeadingTraits">
+                
+                    &nbsp;
+                
+                </div>
+
+                <div id="characterSheetMotivation" class="characterSheetHeadingTraits">
+                
+                    <strong>Motivation:</strong>
+                
+                </div>
+
+                <div id="characterSheetTypeCasteWrapper" class="characterSheetHeadingTraits">
+
+                    <div id="characterSheetType">
+                
+                        <strong>Type:</strong>
+                
+                    </div>
+
+                    <div id="characterSheetCaste">
+                
+                        <strong>Caste:</strong>
+                
+                    </div>
+                        
+                </div>
+
+                <div id="characterSheetLogo">
+                
+                    <img src="images/characterSheet/characterSheetLogo.png" />
+                
+                </div>
+
+
+
+            </div>
+
+            <div id="attributesHeader" class="characterSheetSectionHeader">
+            
+                ATTRIBUTES
+            
+            </div>
+
+            <div id="attributes" class="characterSheetSection">
+
+
+                <div id="mentalAttributes" class="characterSheetAttributeGroup">
+                
+                   <div id="traitWrapperPerception" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelPerception" class="characterSheetTraitLabel">
+                        
+                            Perception
+                        
+                        </div>
+
+                        <div id="traitDotsPerception" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotPerception1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerception5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperIntelligence" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelIntelligence" class="characterSheetTraitLabel">
+                        
+                            Intelligence
+                        
+                        </div>
+
+                        <div id="traitDotsIntelligence" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotIntelligence1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntelligence5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperWits" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelWits" class="characterSheetTraitLabel">
+                        
+                            Wits
+                        
+                        </div>
+
+                        <div id="traitDotsWits" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotWits1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWits5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                
+                </div>
+
+                 <div id="socialAttributes" class="characterSheetAttributeGroup">
+                
+                    <div id="traitWrapperCharisma" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelCharisma" class="characterSheetTraitLabel">
+                        
+                            Charisma
+                        
+                        </div>
+
+                        <div id="traitDotsCharisma" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotCharisma1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCharisma5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperManipulation" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelManipulation" class="characterSheetTraitLabel">
+                        
+                            Manipulation
+                        
+                        </div>
+
+                        <div id="traitDotsManipulation" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotManipulation1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotManipulation5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperAppearance" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelAppearance" class="characterSheetTraitLabel">
+                        
+                            Appearance
+                        
+                        </div>
+
+                        <div id="traitDotsAppearance" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotAppearance1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAppearance5" />
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+
+            
+                <div id="physicalAttributes" class="characterSheetAttributeGroup">
+                
+                    <div id="traitWrapperStrength" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelStrength" class="characterSheetTraitLabel">
+                        
+                            Strength
+                        
+                        </div>
+
+                        <div id="traitDotsStrength" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotStrength1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStrength5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperDexterity" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelDexterity" class="characterSheetTraitLabel">
+                        
+                            Dexterity
+                        
+                        </div>
+
+                        <div id="traitDotsDexterity" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotDexterity1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDexterity5" />
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div id="traitWrapperStamina" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelStamina" class="characterSheetTraitLabel">
+                        
+                            Stamina
+                        
+                        </div>
+
+                        <div id="traitDotsStamina" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotFull.png" id="traitDotStamina1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStamina5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div class="clear"></div>
+                
+                </div>
+
+            </div>
+
+
+            <div id="abilitiesHeader" class="characterSheetSectionHeader">
+            
+                ABILITIES
+            
+            </div>
+
+
+            <div id="abilities" class="characterSheetSection">
+
+
+             <div id="twilightAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="twilightAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          TWILIGHT                               
+
+                    </div>
+                
+                    <div id="traitWrapperCraft" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelCraft" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityCraft" />
+
+                            Craft
+                        
+                        </div>
+
+                        <div id="traitDotsCraft" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotCraft5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperInvestigation" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelInvestigation" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityInvestigation" />
+
+                            Investigation
+                        
+                        </div>
+
+                        <div id="traitDotsInvestigation" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotInvestigation5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperLore" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelLore" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityLore" />
+
+                            Lore
+                        
+                        </div>
+
+                        <div id="traitDotsLore" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLore5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperMedicine" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelMedicine" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityMedicine" />
+
+                            Medicine
+                        
+                        </div>
+
+                        <div id="traitDotsMedicine" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMedicine5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperOccult" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelOccult" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityOccult" />
+
+                            Occult
+                        
+                        </div>
+
+                        <div id="traitDotsOccult" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotOccult5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>                         
+
+            
+                <div id="zenithAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="zenithAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          ZENITH                                
+
+                    </div>
+                
+                    <div id="traitWrapperIntegrity" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelIntegrity" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityIntegrity" />
+
+                            Integrity
+                        
+                        </div>
+
+                        <div id="traitDotsIntegrity" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotIntegrity5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperPerformance" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelPerformance" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityPerformance" />
+
+                            Performance
+                        
+                        </div>
+
+                        <div id="traitDotsPerformance" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPerformance5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperPresence" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelPresence" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityPresence" />
+
+                            Presence
+                        
+                        </div>
+
+                        <div id="traitDotsPresence" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotPresence5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperResistance" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelResistance" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityResistance" />
+
+                            Resistance
+                        
+                        </div>
+
+                        <div id="traitDotsResistance" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotResistance5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSurvival" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSurvival" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySurvival" />
+
+                            Survival
+                        
+                        </div>
+
+                        <div id="traitDotsSurvival" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSurvival5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>
+
+            
+
+
+               <div id="dawnAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="dawnAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          DAWN                                
+
+                    </div>
+                
+                    <div id="traitWrapperArchery" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelArchery" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityArchery" />
+
+                            Archery
+                        
+                        </div>
+
+                        <div id="traitDotsArchery" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotArchery5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperMartialArts" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelMartialArts" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityMartialArts" />
+
+                            Martial Arts
+                        
+                        </div>
+
+                        <div id="traitDotsMartial Arts" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMartialArts5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperMelee" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelMelee" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityMelee" />
+
+                            Melee
+                        
+                        </div>
+
+                        <div id="traitDotsMelee" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotMelee5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperThrown" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelThrown" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityThrown" />
+
+                            Thrown
+                        
+                        </div>
+
+                        <div id="traitDotsThrown" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotThrown5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperWar" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelWar" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityWar" />
+
+                            War
+                        
+                        </div>
+
+                        <div id="traitDotsWar" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotWar5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                
+                </div>               
+
+                
+
+                <div id="specialtiesAbilityGroup" class="characterSheetAbilityGroup">
+                
+                    <div id="specialtiesAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          SPECIALTIES                                
+
+                    </div>
+                
+                    <div id="traitWrapperSpecialty1" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty1" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty1" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty1" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty1_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty1_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty1_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty2" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty2" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty2" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty2" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty2_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty2_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty2_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty3" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty3" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty3" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty3" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty3_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty3_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty3_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty4" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty4" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty4" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty4" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty4_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty4_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty4_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSpecialty5" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSpecialty5" class="characterSheetTraitLabel traitLabelSpecialty">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySpecialty5" />
+
+                        </div>
+
+                        <div id="traitDotsSpecialty5" class="characterSheetTraitDots traitDotsSpecialty">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty5_1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty5_2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSpecialty5_3" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>
+            
+
+<div id="eclipseAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="eclipseAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          ECLIPSE                                
+
+                    </div>
+                
+                    <div id="traitWrapperBureaucracy" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelBureaucracy" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityBureaucracy" />
+
+                            Bureaucracy
+                        
+                        </div>
+
+                        <div id="traitDotsBureaucracy" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotBureaucracy5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperLinguistics" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelLinguistics" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityLinguistics" />
+
+                            Linguistics
+                        
+                        </div>
+
+                        <div id="traitDotsLinguistics" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLinguistics5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperRide" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelRide" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityRide" />
+
+                            Ride
+                        
+                        </div>
+
+                        <div id="traitDotsRide" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotRide5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSail" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSail" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySail" />
+
+                            Sail
+                        
+                        </div>
+
+                        <div id="traitDotsSail" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSail5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperSocialise" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelSocialise" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilitySocialise" />
+
+                            Socialise
+                        
+                        </div>
+
+                        <div id="traitDotsSocialise" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotSocialise5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                </div>
+
+                <div id="nightAbilities" class="characterSheetAbilityGroup">
+                
+                    <div id="nightAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                          NIGHT                               
+
+                    </div>
+                
+                    <div id="traitWrapperAthletics" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelAthletics" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityAthletics" />
+
+                            Athletics
+                        
+                        </div>
+
+                        <div id="traitDotsAthletics" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAthletics5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperAwareness" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelAwareness" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityAwareness" />
+
+                            Awareness
+                        
+                        </div>
+
+                        <div id="traitDotsAwareness" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotAwareness5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperDodge" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelDodge" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityDodge" />
+
+                            Dodge
+                        
+                        </div>
+
+                        <div id="traitDotsDodge" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotDodge5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperLarceny" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelLarceny" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityLarceny" />
+
+                            Larceny
+                        
+                        </div>
+
+                        <div id="traitDotsLarceny" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotLarceny5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div id="traitWrapperStealth" class="characterSheetTraitWrapper">
+                    
+                        <div id="traitLabelStealth" class="characterSheetTraitLabel">
+                        
+                            <img src="images/characterSheet/boxEmpty.png" class="characterSheetFavouredAbilityBox" id="favouredAbilityStealth" />
+
+                            Stealth
+                        
+                        </div>
+
+                        <div id="traitDotsStealth" class="characterSheetTraitDots">
+                        
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth1" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth2" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth3" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth4" />
+                            <img src="images/characterSheet/dotEmpty.png" id="traitDotStealth5" />
+                        
+                        </div>
+                    
+                        
+                    </div>
+
+                    <div class="clear"></div>
+                
+                </div>
+
+
+            </div>
+
+            <div id="advantagesHeader" class="characterSheetSectionHeader">
+            
+                ADVANTAGES
+            
+            </div>
+
+
+            <div id="advantages" class="characterSheetSection">
+
+                <div id="advantagesTier1" class="characterSheetSubsection">
+
+                     <div id="virtues">
+                 
+                        <div id="virtueLabel" class="characterSheetAbilityGroupLabel">
+                    
+                            VIRTUES
+                    
+                        </div>
+
+                        <div id="compassion" class="characterSheetVirtueWrapper">
+
+                            <div id="compassionLabel" class="characterSheetVirtueLabel">
+                        
+                                Compassion
+                        
+                            </div>
+
+                            <div id="compassionDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotCompassion1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotCompassion5" />
+                        
+                            </div>
+
+                            <div id="compassionBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxCompassion5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+                        <div id="temperance" class="characterSheetVirtueWrapper">
+
+                            <div id="temperanceLabel" class="characterSheetVirtueLabel">
+                        
+                                Temperance
+                        
+                            </div>
+
+                            <div id="temperanceDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotTemperance1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotTemperance5" />
+                        
+                            </div>
+
+                            <div id="temperanceBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxTemperance5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+                        <div id="conviction" class="characterSheetVirtueWrapper">
+
+                            <div id="convictionLabel" class="characterSheetVirtueLabel">
+                        
+                                Conviction
+                        
+                            </div>
+
+                            <div id="convictionDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotConviction1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotConviction5" />
+                        
+                            </div>
+
+                            <div id="convictionBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxConviction5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+                        <div id="valour" class="characterSheetVirtueWrapper">
+
+                            <div id="valourLabel" class="characterSheetVirtueLabel">
+                        
+                                Valor
+                        
+                            </div>
+
+                            <div id="valourDots" class="virtueDots">
+
+                                <img src="images/characterSheet/dotFull.png" id="traitDotValor1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotValor5" />
+                        
+                            </div>
+
+                            <div id="valourBoxes" class="virtueBoxes">
+                        
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxValor5" />                        
+                                                
+                            </div>
+
+                    
+                        </div>
+
+
+                    </div>
+
+
+                     <div id="willpower">
+                        <div id="willpowerWrapper">
+                   
+                            <div id="willpowerLabel" class="characterSheetAbilityGroupLabel">
+                    
+                                WILLPOWER
+                    
+                            </div>
+
+                            <div id="willpowerDots">
+                    
+                                <img src="images/characterSheet/dotFull.png" id="traitDotWillpower1" />
+                                <img src="images/characterSheet/dotFull.png" id="traitDotWillpower2" />
+                                <img src="images/characterSheet/dotFull.png" id="traitDotWillpower3" />
+                                <img src="images/characterSheet/dotFull.png" id="traitDotWillpower4" />
+                                <img src="images/characterSheet/dotFull.png" id="traitDotWillpower5" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower6" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower7" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower8" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower9" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotWillpower10" />
+                        
+
+                            </div>
+
+                            <div id="willpowerBoxes">
+                    
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower2" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower3" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower4" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower5" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower6" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower7" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower8" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower9" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxWillpower10" />
+                    
+                            </div>
+
+                        </div>
+
+                        <div id="defenceValuesLabel" class="characterSheetAbilityGroupLabel">
+                    
+                            DEFENCE VALUES
+                    
+                        </div>
+
+                        <div id="dodgeDV" class="defenceValue">
+                    
+                            Dodge:
+
+                        </div>
+
+                        <div id="dodgeMDV" class="defenceValue">
+                    
+                            M Dodge:
+                    
+                        </div>
+
+                        <div id="parryMDV" class="defenceValue">
+                    
+                            M Parry:
+                    
+                        </div>
+                 
+                     </div>
+                        
+                     <div id="backgroundsAbilityGroup" class="characterSheetAbilityGroup">
+                
+                        <div id="backgroundsAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              BACKGROUNDS                                
+
+                        </div>
+                
+                        <div id="traitWrapperBackground1" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground1" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground1" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground1_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground2" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground2" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground2" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground2_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground3" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground3" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground3" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground3_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground4" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground4" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground4" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground4_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div id="traitWrapperBackground5" class="characterSheetTraitWrapper">
+                    
+                            <div id="traitLabelBackground5" class="characterSheetTraitLabel">
+                        
+                                &nbsp;
+
+                            </div>
+
+                            <div id="traitDotsBackground5" class="characterSheetTraitDots">
+                        
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotBackground5_5" />
+                        
+                            </div>
+                    
+                        
+                        </div>
+
+                        <div class="clear"></div>
+
+                    </div>
+            
+                </div>
+
+
+                <div id="advantagesTier2" class="characterSheetSubsection">
+
+                    
+
+
+                    <div id="soak">
+
+                        <div id="soakAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              SOAK AND ARMOUR                               
+
+                        </div>
+
+                        <div class="soakTableWrapper">
+                        
+                            <table id="soakTable">
+                            
+                                <tr id="soakTableHeader">
+                                
+                                    <th id="soakHeaderType">Type</th>
+                                    <th id="soakHeaderBashing">Bashing</th>
+                                    <th id="soakHeaderLethal">Lethal</th>
+                                    <th id="soakHeaderAggravated">Aggravated</th>
+                                    <th id="soakHeaderHardness">Hardness</th>
+                                    <th id="soakHeaderMobility">Mobility</th>
+                                    <th id="soakHeaderFatigue">Fatigue</th>
+
+                                </tr>
+
+                                <tr class="soakTableBody" id="soakNatural">
+                                
+                                    <td id="soakTypeNatural">Natural</td>
+                                    <td id="soakBashingNatural"></td>
+                                    <td id="soakLethalNatural"></td>
+                                    <td id="soakAggravatedNatural"></td>
+                                    <td id="soakHardnessNatural"> - </td>
+                                    <td id="soakMobilityNatural"> - </td>
+                                    <td id="soakFatigueNatural"> - </td>
+                                
+                                </tr>
+
+                                <tr class="soakTableBody" id="soakArmour">
+
+                                    <td id="soakTypeArmour">Armour</td>
+                                    <td id="soakBashingArmour"></td>
+                                    <td id="soakLethalArmour"></td>
+                                    <td id="soakAggravatedArmour"></td>
+                                    <td id="soakHardnessArmour"> - </td>
+                                    <td id="soakMobilityArmour"> - </td>
+                                    <td id="soakFatigueArmour"> - </td>
+
+                                </tr>
+                            
+                            </table>
+                        
+                        </div>
+                    
+                        
+                    
+                    </div>
+
+                    <div id="health">
+
+                        
+                    
+                        <div id="healthAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              HEALTH                                
+
+                        </div>      
+                        
+                        <div id="healthLevels0" class="healthLevels">
+                            
+                            <div id="healthLevels0Label" class="healthLevelsLabel">
+
+                                -0
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels0Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth0_1" />
+                            
+                            </div>
+                        
+                        </div>
+
+                        <div id="healthLevels1" class="healthLevels">
+                            
+                            <div id="healthLevels1Label" class="healthLevelsLabel">
+
+                                -1
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels1Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth1_1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth1_2" />
+                            
+                            </div>
+                            
+                        
+                        </div>
+
+                        <div id="healthLevels2" class="healthLevels">
+                            
+                            <div id="healthLevels2Label" class="healthLevelsLabel">
+
+                                -2
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels2Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth2_1" />
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth2_2" />
+                            
+                            </div>
+                            
+                        
+                        </div>
+
+                        <div id="healthLevels4" class="healthLevels">
+                            
+                            <div id="healthLevels4Label" class="healthLevelsLabel">
+
+                                -4
+                            
+                            </div>
+
+                            
+                            <div id="healthLevels4Boxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealth4_1" />
+                                                            
+                            </div>
+                            
+                        </div>
+
+                        <div id="healthLevelsIncapacitated" class="healthLevels">
+                            
+                            <div id="healthLevelsIncapacitatedLabel" class="healthLevelsLabel">
+
+                                Incapacitated
+                            
+                            </div>
+
+                            
+                            <div id="healthLevelsIncapacitatedBoxes" class="healthLevelsBoxes">
+
+                                <img src="images/characterSheet/boxEmpty.png" id="traitBoxHealthIncapacitated_1" />
+                                                            
+                            </div>
+                            
+                        </div>
+
+                        <div id="healthLevelsDying" class="healthLevels">
+                            
+                            <div id="healthLevelsDyingLabel" class="healthLevelsLabel">
+
+                                Dying
+                            
+                            </div>
+
+                            
+                            <div id="healthLevelsDyingBoxes" class="healthLevelsBoxes">
+
+                                                            
+                            </div>
+                            
+                        </div>
+
+                        
+                                        <div id="intimacies">
+                    
+                        <div id="intimaciesGroupLabel" class="characterSheetAbilityGroupLabel">
+                            Intimacies
+                        </div>
+                    
+                        <div id="intimacy1" class="characterSheetIntimacy">&nbsp;</div>
+                        <div id="intimacy2" class="characterSheetIntimacy">&nbsp;</div>
+                        <div id="intimacy3" class="characterSheetIntimacy">&nbsp;</div>
+                        <div id="intimacy4" class="characterSheetIntimacy">&nbsp;</div>
+                        <div id="intimacy5" class="characterSheetIntimacy">&nbsp;</div>
+
+
+                    </div>
+                    
+                    </div>
+
+
+
+                    <div id="weapons">
+                    
+                        <div id="weaponsAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              WEAPON                               
+
+                        </div>
+
+                        <div class="weaponsTableWrapper">
+                        
+                            <table id="weaponTable">
+                            
+                                <tr id="weaponTableHeader">
+                                
+                                    <th id="weaponHeaderName">Name</th>
+                                    <th id="weaponHeaderSpeed">Speed</th>
+                                    <th id="weaponHeaderAccuracy">Accuracy</th>
+                                    <th id="weaponHeaderDamage">Damage</th>
+                                    <th id="weaponHeaderParryDV">Parry DV</th>
+                                    <th id="weaponHeaderRate">Rate</th>
+                                    <th id="weaponHeaderRange">Range</th>
+                                    <th id="weaponHeaderTags">Tags</th>
+
+                                </tr>
+
+                                <tr id="weaponTableBody" class="weaponTableBody">
+                                
+                                    <td id="weaponName1"></td>
+                                    <td id="weaponSpeed1"></td>
+                                    <td id="weaponAccuracy1"></td>
+                                    <td id="weaponDamage1"></td>
+                                    <td id="weaponParryDV1"></td>
+                                    <td id="weaponRate1"></td>
+                                    <td id="weaponRange1"> - </td>
+                                    <td id="weaponTags1"></td>
+                                
+                                </tr>
+
+                            </table>
+                        
+                        </div>
+                    
+
+                       <!-- <div id="otherEquipment"></div> -->
+                        
+                    
+                    </div>
+
+                    
+                
+                    
+                    <div class="clear"></div>
+                
+                </div>
+
+            </div>
+
+
+             <div id="exaltedAdvantagesHeader" class="characterSheetSectionHeader">
+            
+               EXALTED ADVANTAGES
+            
+             </div>
+
+
+
+
+
+             <div id="exaltedAdvantages" class="characterSheetSectionLast">
+
+                    <div id="charms">
+                    
+                        <div id="charmsAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              CHARMS AND POWERS                               
+
+                        </div>
+                    
+                        <div id="charm1" class="characterSheetCharm">
+
+                            <div id="charm1Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm1Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm2" class="characterSheetCharm">
+
+                            <div id="charm2Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm2Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm3" class="characterSheetCharm">
+
+                            <div id="charm3Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm3Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm4" class="characterSheetCharm">
+
+                            <div id="charm4Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm4Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm5" class="characterSheetCharm">
+
+                            <div id="charm5Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm5Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm6" class="characterSheetCharm">
+
+                            <div id="charm6Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm6Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm7" class="characterSheetCharm">
+
+                            <div id="charm7Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm7Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm8" class="characterSheetCharm">
+
+                            <div id="charm8Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm8Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm9" class="characterSheetCharm">
+
+                            <div id="charm9Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm9Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm10" class="characterSheetCharm">
+
+                            <div id="charm10Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm10Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm11" class="characterSheetCharm">
+
+                            <div id="charm11Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm11Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm12" class="characterSheetCharm">
+
+                            <div id="charm12Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm12Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm13" class="characterSheetCharm">
+
+                            <div id="charm13Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm13Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm14" class="characterSheetCharm">
+
+                            <div id="charm14Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm14Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+
+                        <div id="charm15" class="characterSheetCharm">
+
+                            <div id="charm15Cost" class="characterSheetCharmCost">
+                            
+                                -
+                            
+                            </div>
+
+                            <div id="charm15Label" class="characterSheetCharmLabel">
+                            
+                                &nbsp;
+                            
+                            </div>
+
+                        </div>
+ 
+
+                    
+                    </div>
+
+
+             
+                   <div id="essence">
+                    
+                        <div id="permanentEssenceWrapper">
+
+                            <div id="essenceAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                                  ESSENCE                               
+
+                            </div>
+
+                            <div id="essenceDots">
+                    
+                                <img src="images/characterSheet/dotFull.png" id="traitDotEssence1" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence2" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence3" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence4" />
+                                <img src="images/characterSheet/dotEmpty.png" id="traitDotEssence5" />
+                        
+
+                            </div>
+
+                        </div>
+
+                        <div id="personalMotes">
+
+                            <div id="personalAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                                  Personal                               
+
+                            </div>
+
+                            <div id="essencePoolPersonalTotal" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPersonalTotalLabel" class="characterSheetEssencePoolLabel">
+
+                                    Total
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPersonalTotalNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                            <div id="essencePoolPersonalCommitted" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPersonalCommittedLabel" class="characterSheetEssencePoolLabel">
+
+                                    Committed
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPersonalCommittedNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                            <div id="essencePoolPersonalCap" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPersonalCapLabel" class="characterSheetEssencePoolLabel">
+
+                                    Cap
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPersonalCapNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                            <div id="essencePoolPersonalAvailable" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPersonalAvailableLabel" class="characterSheetEssencePoolLabel">
+
+                                    Available
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPersonalAvailableNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                        </div>
+
+                        <div id ="peripheralMotes">
+
+                            <div id="peripheralAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                                  Peripheral                               
+
+                            </div>
+
+
+                           <div id="essencePoolPeripheralTotal" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPeripheralTotalLabel" class="characterSheetEssencePoolLabel">
+
+                                    Total
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPeripheralTotalNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                            <div id="essencePoolPeripheralCommitted" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPeripheralCommittedLabel" class="characterSheetEssencePoolLabel">
+
+                                    Committed
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPeripheralCommittedNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                            <div id="essencePoolPeripheralCap" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPeripheralCapLabel" class="characterSheetEssencePoolLabel">
+
+                                    Cap
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPeripheralCapNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                            <div id="essencePoolPeripheralAvailable" class="characterSheetEssencePool">
+                            
+                                <div id="essencePoolPeripheralAvailableLabel" class="characterSheetEssencePoolLabel">
+
+                                    Available
+                            
+                                </div>
+
+                            
+                                <div id="essencePoolPeripheralAvailableNumber" class="characterSheetEssencePoolNumber">
+
+                                    0
+                            
+                                </div>
+                        
+                            </div>
+
+                        </div>
+
+                        <div class="clear"></div>
+                        
+
+                        <div id="limitAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              LIMIT BREAK                               
+
+                        </div>
+
+                        <div id="limitBoxes">
+                    
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit1" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit2" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit3" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit4" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit5" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit6" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit7" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit8" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit9" />
+                            <img src="images/characterSheet/boxEmpty.png" id="traitBoxLimit10" />
+                    
+                        </div>
+
+                        <div id="virtueFlawAbilityGroupLabel" class="characterSheetAbilityGroupLabel">
+
+                              Virtue Flaw                               
+
+                        </div>
+
+                        <div id="virtueFlaw">
+                        
+                            -
+                        
+                        </div>
+
+                    
+                    </div>
+
+
+                    <div class="clear"></div>
+
+             </div>
+        
+        </div>
+
+                <div id="boilerplate">
+        
+            <p>Exalted, Creation and the Storyteller game system are the work of White Wolf/CCP; this fan-work is intended to popularise their game, not challenge their copyright.   Vector source for dice icons courtesy of Hai-Etlik.  All other images pillaged randomly from the internet; their use is not intended as a challenge to the rights of the artists or owners (known artists:  Melissa Uran, Taizo Bettin, ~zazB).  This application uses JQuery and JQuery UI.  All other code by Jye Nicolson.  All text by Jye Nicolson.  Please attribute if you find it useful.</p>
+        
+        </div>
+
+    	<!-- <script src="js/jquery-1.7.1.js"></script>
+        <script src="js/jquery-ui-1.8.16.custom.min.js"></script>  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+        <script src="js/constants.js"></script>
+        <script src="js/traitLibrary.js"></script>
+        <script src="js/functionLibrary.js"></script>
+        <script src="js/segmentLibrary.js"></script>
+        <script src="js/socialLibrary.js"></script>
+        <script src="js/social.js"></script>
+        <script src="js/combatLibrary.js"></script>
+        <script src="js/combat.js"></script>
+        <script src="js/character.js"></script>
+		<script src="js/characterSheet.js"></script>
+        <script src="js/sakuya.js"></script>
+        <script src="js/tutorial.js"></script>
+
+        <script src="js/test.js"></script>
+
+
+</body>
+</html>

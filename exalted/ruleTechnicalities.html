@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<head>
+    <title>Exalted: Becoming (a Tutorial for Exalted Second Exition)</title>
+
+    <link rel="Stylesheet" href="css/exalted.css" />
+    <link rel="Stylesheet" href="css/sunny/jquery-ui-1.8.16.custom.css" />
+
+</head>
+<body>
+
+        <div id="header"><img src="images/Exalted2Logo.png" /></div>
+
+       
+       <div class="essayContent">
+       
+            <h1>Rule Technicalities: Omissions, Lies and Errata</h1>
+
+            <h3>Stunts and Heroic Mortals</h3>
+
+            <p>Heroic Mortals receive dice and rewards as if their stunt was one lower than they achieved.  We ignore this rule for Sakuya because she's there to teach you how to play a Solar, not a HM.</p>
+
+            <p>This rule is disposable so long as you don't care about Heroic Mortals having ready access to Willpower regeneration - note Sakuya can reliably spend Willpower and yet remain full before her Exaltation.</p>
+
+
+            <h3>Heroic Mortal Character Creation</h3>
+
+            <p>Sakuya's build is a legal starting Solar Exalt, but not a legal starting Heroic Mortal.  In particular her high Integrity, Investigation, Athletics and Awareness ratings depend on having multiple Favoured abilities for cost breaks.</p>
+
+    
+            <h3>DV as External Penalty</h3>
+
+            <p>The tutorial mentions applying DV as an external penalty.  This is correct as far as procedure goes, but DV is not an external penalty, it just works like one.  Charms and effects that interact with external penalties have no effect on DVs.</p>
+        
+            
+            <h3>DVs and Dice Bonuses</h3>
+
+            <p>Dice bonuses to DVs (such as First Excellencies) are usually rolled, and successes added to the DV.  The tutorial instead adds them to the underlying DV calculation, because that's easy for a computer to do and less clunky in the interface.  The average result is the same.</p>
+
+            <p>Note the tutorial's handling of stunt bonuses to DVs - adding directly to them rather than rolling - is correct by errata.</p>
+
+
+            <h3>Simultaneous Turns</h3>
+
+            <p>In the tutorial, if multiple characters act on the same tick, Sakuya always acts first if she is one of them, followed by any NPCs in an arbitrary order.  If Sakuya and Crimson Rain act on the same tick, and Sakuya kills Crimson Rain on her action, he is dead and does not get to act.</p>
+
+            <p>By the rules, such actions are instead <strong>simultaneous</strong>.  If Sakuya and Crimson Rain act on the same turn and Sakuya kills Crimson Rain, his action is still resolved as if Sakuya's hadn't happened yet.  The effects of the actions are applied all together at the end of the tick; Crimson Rain might kill Sakuya in turn, and they will both die.  It's to the PC's advantage to go last in such a situation, so they have the most information with which to make decisions (eg if Sakuya's action is played out after Crimson Rain's, she knows how many motes she spent on defence and how many she can afford to spend on killing him).</p>
+        
+            
+            <h3>Flurries</h3>
+
+            <p>The rules are not clear on when you must decide what actions you are taking in your flurry.  You must decide how <strong>many</strong> actions you are taking, and the rules for flurry speed (the slowest of all actions, whether taken or not) imply deciding all actions up front, but there is no concrete rule.  This tutorial allows you to decide as you go, as the interface for choosing five actions up front would be horrible.</p>
+
+
+            <h3>Knockback, Knockdown and Stunning</h3>
+
+            <p>These rules are ignored in the tutorial because they're fiddly, rarely affect Exalted and in my experience are completely forgotten by most groups unless actively caused by a Charm.</p>
+
+            <p><strong>Knockdown</strong> is checked for when hit by an attack with more raw damage than the character's (Stamina + Resistance).  The character falls prone unless they succeed on a reflexive ([Dexterity or Stamina] + [Athletics or Resistance]) roll versus difficulty 2.  Rising from prone is a miscellaneous action.</p>
+
+            <p><strong>Knockback</strong> is knockdown, only the character is also hurled backwards a yard for every 3 dice of raw damage.  This presumeably applies at the ST's option; it's not clear whether it's subject to the same resistance roll as knockdown.</p>
+
+            <p><strong>Stunning</strong> is checked for when a character suffers more health levels of damage than their Stamina on a single attack.  They must pass a reflexive (Stamina + Resistance) roll at a difficulty of (health levels inflicted by attack - Stamina) or suffer a -2 internal penalty to all non-reflexive rolls until the attacker's next action tick.</p>
+
+            <p>The upshot of these rules is that <strong>Stamina and Resistance are more valuable traits than Sakuya's adventures would lead you to believe.</strong>  You can do without them by having excellent defence, but it makes things worse if you're actually hit.</p>
+
+
+            <h3>The Ten Steps of Attack Resolution</h3>
+
+            <p>The timing rules of attack and defence are much more precise than the tutorial would lead you to believe.  The tutorial <strong>complies</strong> with these rules, but doesn't explain them.  This is largely because a beginning player doesn't need to know all the steps, unless rerolls, counterattacks and late-step soak Charms all feature in the first session for some reason.</p>
+
+            <p>The steps are:</p>
+
+            <ol>
+            
+                <li><strong>Declaration of Attack.</strong> The attacker chooses their target and stunts.  They must decalre now if they're spending Willpower for an automatic success or Virtue activation.  Attack Charms are declared and activated on this step by default.</li>
+                <li><strong>Defender Declares Response.</strong> The defender chooses their DV and stunts.  They must decalre now if they're spending Willpower for an automatic success or Virtue activation.  Defence Charms that interact with the attack or DVs are declared and activated on this step by default.</li>
+                <li><strong>Attack Roll.</strong>  The attack is rolled.</li>
+                <li><strong>Attack Reroll.</strong>  If the attacker has a Charm or effect that permits a reroll, they use it now.</li>
+                <li><strong>Subtract External Penalties/Apply Defences.</strong>  External penalties are subtracted from the attacker's roll.  The DV is fully calculated and subtracted from the attacker's successes.  Defence Charms interacting with the attack or DVs are applied here.</li>
+                <li><strong>Defence Reroll.</strong>  Some defence Charms can be activated in this step.  Since DVs are not rolled, reroll Charms typically grant a small bonus instead.</li>
+                <li><strong>Calculate Raw Damage.</strong> If the attack hit, add the remaining attack successes and any bonus damage to the base damage.  Some attack Charms that add to damage can be activated at this step.  Most defence Charms that interact with soak or the damage of the attack are activated at this step.</li>
+                <li><strong>Apply Hardness and Soak, Roll Damage.</strong> If the defender's Hardness is equal or greater than the raw damage, the attack is ignored.  Otherwise, the Hardness is ignored, and the defender's soak subtracted from the raw damage.  The raw damage cannot be reduced below minimum damage, which by default is 1.  The remaining damage is rolled as dice, the final damage equalling the number of successes.  Certain </li>
+                <li><strong>Counterattacks.</strong> If the defender has a Charm or effect granting a counterattack, run through steps 1-8 of that attack before continuing.  Most counterattack Charms are activated at this step.</li>
+                <li><strong>Apply Effects.</strong> The results of all the above actually take effect here (including any counterattacks).  Each final point of damage fills a health level of the target.</li>
+            </ol>
+
+            <p>When not resolving Charm timing ambiguities, all of that works exactly as presented in the tutorial.  Very few attacks in play will use all of the steps, let alone explicitly call them out.  The take-away rule of thumb is <strong>the Attacker must provide the Defender the information they need to make decisions.</strong></p>
+
+            <p>The consequence of the step system not obvious from the tutorial is that Charms activated in a later step are more valuable, as you know more about the situation.  Heavenly Guardian Defence, a perfect parry, is activated in Step 2 when you think you're in deep trouble.  Adamant Skin Technique, a perfect soak, is activated in Step 7 when you <strong>know</strong> you're in deep trouble.</p>
+
+            <h3>Ringing Anvil Onslaught</h3>
+
+            <p>On activating this Charm, the Dragon Blooded rolls their Melee ability in dice (which they may enhance with an Excellency, but is otherwise unmodified).  The Charm creates a flurry with a number of attacks equal to 1 + the successes on the roll, up to a total of 1 + the Dragon Blooded's Melee ability.</p>
+
+            <p>This roll is what makes RAO weaker than the equivalent Solar Charm.  We just assume Crimson Rain rolls 3 successes, for a total of 4 attacks, for simplicity's sake.</p>
+
+
+            <h3>Surprise and Surprise Anticipation Method</h3>
+
+            <p>Technically Sakuya should make a (Wits + Awareness) roll versus Vedara's (Dexterity + Stealth) roll on the initial ambush attack even if she doesn't have a mote for <em>Surprise Anticipation Method</em>.  It's not clear if she should do so for the second if Vedara successfully re-established surprise, as that would require Vedara to win two roll-offs for that attack (one on the miscellaneous action, one on the attack).  This isn't what the rules imply, but it also doesn't make sense for SAM to cause Sakuya's roll to oppose the hide attempt to autosucceed, as Vedara might be hiding in order to escape rather than attack.</p>
+
+            <p>It seems sensible to just allow <em>Surprise Anticipation Method</em> to remove the unexpected quality from an attack, regardless of whether there's an Awareness roll involved.</p>
+
+
+            <h3>Combos</h3>
+
+            <p>Combos were removed as a character trait by the 2.5 errata, but their rules for how Charms may be legally combined are still in force.  In the tutorial Sakuya can decide whether or not to use <em>Hungry Tiger Technique</em> individually on each attack in a flurry, regardless of whether she's using other Charms.  If she also uses <em>First Melee Excellency</em>, technically the decision on whether to use HTT would have to be all-or-nothing, even though the excellency could still be used ad-hoc as it's Reflexive.</p>
+
+            <p>It's hard to imagine most groups <strong>remembering</strong> that rule, let alone enforcing it.  In practice I'd suggest the limitations on Simple and Extra Action Charms will be enforced at most tables and the rest of the Combo rules ignored.</p>
+
+            
+            <h3>Minimum Damage</h3>
+
+            <p>The 2.5 errata dropped minimum damage to 1, rather than (Essence).  Artifact weapons universally gained the Overwhelming tag, mostly at rating 2.  The tutorial's handling of minimum damage is correct.</p>
+
+
+            <h3>Stunts</h3>
+
+            <p>The 2.5 errata removed the &quot;success&quot; requirement from stunts, and changed their mote/Willpower reward timing to the character's DV refresh for the best stunt only.  The tutorial's handling of stunts is correct (except that by the rules you can stunt actions in a flurry individually, if you wish).</p><p>Note that the tutorial is inconsistent about offering stunts for unrolled actions (e.g. Aim and Guard), but they can be stunted like any other action.</p>
+
+            
+            <h3>Natural Mental Influence and Willpower</h3>
+
+            <p>2.5 changed the Willpower cost to resist a successful Natural Mental Influence attack, but granted immunity after one such expenditure, not two.  The tutorial's handling of Natural Mental Influence is correct.  Note that Sakuya may repeatedly attack Meiling only because Meiling never chooses to resist an attack.</p>
+
+
+            <h3>Updated Weapon Statistics and the Orichalcum Bonus</h3>
+
+            <p>Most weapons had their statistics changed by the 2.5 errata.  All weapon stats in the tutorial are correct.  Orichalcum's material bonus for melee weapons was changed to +2 accuracy, +1 defence, +1 rate.  This is why Sakuya is rocking a +6 accuracy weapon!</p>
+
+
+            <h3>Perfect Equipment</h3>
+
+            <p>As the personal champion of a reigning monarch, Sakuya might be expected to wield a perfect sword.  The 2.5 errata removed perfect equipment from the game, so her sword is merely Exceptional.  One can assume it has exquisite finishings :)</p>
+
+        
+        </div>
+
+        <div id="menu">
+        
+            <div id="home" class="menuButton">
+                
+                Home
+
+            </div>
+
+
+            <div id="startTutorial" class="menuButton">
+                
+                Start Tutorial
+
+            </div>
+
+            <div id="load" class="menuButton">
+                
+                Load Game
+
+            </div>         
+            
+            <div id="essays" class="menuButton">
+                
+                Essays and Links
+
+            </div>   
+        
+        <div class="clear"></div>
+
+        </div>
+
+
+                <div id="boilerplate">
+        
+            <p>Exalted, Creation and the Storyteller game system are the work of White Wolf/CCP; this fan-work is intended to popularise their game, not challenge their copyright.   Vector source for dice icons courtesy of Hai-Etlik.  All other images pillaged randomly from the internet; their use is not intended as a challenge to the rights of the artists or owners (known artists:  Melissa Uran, Taizo Bettin, ~zazB).  This application uses JQuery and JQuery UI.  All other code by Jye Nicolson.  All text by Jye Nicolson.  Please attribute if you find it useful.</p>
+        
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+        <script src="js/constants.js"></script>
+        <script src="js/traitLibrary.js"></script>
+        <script src="js/functionLibrary.js"></script>
+        <script src="js/segmentLibrary.js"></script>
+        <script src="js/socialLibrary.js"></script>
+        <script src="js/social.js"></script>
+        <script src="js/combatLibrary.js"></script>
+        <script src="js/combat.js"></script>
+        <script src="js/character.js"></script>
+		<script src="js/characterSheet.js"></script>
+        <script src="js/tutorial.js"></script>
+
+        <script src="js/test.js"></script>
+
+
+        <script>
+        
+            $(document).ready(function () {
+
+                hookUpSubpageMenu();
+
+            });
+        
+        </script>
+
+
+</body>
+</html>

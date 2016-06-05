@@ -1,0 +1,897 @@
+        body {
+            
+            background-image: url("../images/background.png");
+            background-repeat: repeat-y;
+            padding-left: 55px;
+            
+        }
+        
+        #header {
+         
+            margin-bottom: 8px;
+            
+        }
+        
+        .clear {
+         
+            clear: both;
+            
+        }
+        
+        
+        #boilerplate {
+         
+         margin-top: 100px;
+         width: 750px;
+         border-top: 2px solid #CCCCCC;
+         color: #CCCCCC;
+         fonst-size: 0.7em;
+            
+        }
+        
+        
+         /* ##############################  MENU STYLES ########################################### */
+         
+         #menu {
+             
+             border: 3px solid black;
+             background-color: white;
+             padding: 4px 0px 4px 8px;
+             width: 750px;
+             text-align: center;
+             border-radius: 5px;
+             margin-top: 10px;
+             
+         }
+         
+         #historyGlossaryMenu {
+             
+             border: 3px solid black;
+             background-color: white;
+             padding: 4px 0px 4px 8px;
+             width: 750px;
+             text-align: center;
+             border-radius: 5px;
+             margin-top: 50px;
+             display: none;
+             
+         }         
+         
+         .menuButton {
+          
+            border: 2px solid black;
+            text-align: center;
+            padding: 4px;
+            border-radius: 4px;
+            width: 22%;
+            float: left;
+            margin-right: 10px;
+             
+         }
+         
+         .menuButtonDouble {
+             
+             width: 47%;             
+             
+         }
+         
+         .menuButton:hover {
+          
+            font-weight: bold;
+            border-color: #ffd700; 
+            cursor: pointer;
+             
+         }
+         
+        
+                
+         /* ##############################  TEXT AREA STYLES ########################################### */
+         
+         #currentResponse {
+             
+            border: 3px solid #ffd700;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            color: #444444;
+            width: 750px;
+            border-radius: 5px;
+         }
+        
+         #currentActions {
+            border: 3px solid #f10101;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            font-color: #999999;
+            width: 750px;
+            border-radius: 5px;
+         }
+        
+        
+        .essayContent {
+            border: 3px solid #f10101;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            font-color: #999999;
+            width: 750px;
+            border-radius: 5px;
+         }
+        
+        
+          .segmentAction {
+           
+            white-space: normal;
+            border: 2px solid #f10101;
+            text-align: center;
+            margin: 8px;
+            font-style: italic;
+            padding: 4px;
+            border-radius: 4px;  
+              
+          }
+          
+          .actionOption {
+           
+            white-space: normal;
+            border: 2px solid #ffd700;
+            margin: 8px;
+            padding: 4px;
+            border-radius: 4px;  
+              
+          }          
+          
+          .segmentAction:hover {
+           
+            font-weight: bold;
+            border-color: #ffd700;  
+            cursor: pointer; 
+              
+          }
+          
+          #history {
+           
+            display: none;
+              
+          }
+          
+          .historySegment {
+              
+          
+            border: 3px solid Black;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            width: 750px;
+            border-radius: 5px;        
+              
+          }
+          
+         .historyResponse {
+             
+            border: 2px solid #ffd700;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            color: #444444;
+            border-radius: 5px;
+         }
+        
+         .historyActions {
+            border: 2px solid #f10101;
+            background-color: white; 
+            padding: 4px;   
+            font-color: #999999;
+            border-radius: 5px;
+         }
+                  
+          #glossary {
+           
+            display: none;
+              
+          }           
+          
+          .glossarySegment {               
+            
+            border: 3px solid Black;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            width: 750px;
+            border-radius: 5px;      
+              
+          }    
+          
+        /* ##############################  SLIDESHOW STYLES ########################################### */          
+        
+        .slideshowControl {
+         
+            width: 200px;
+            padding: 4px;
+            
+            border: 2px solid black;
+            
+            background-color: White;
+            
+            text-align: center;
+            
+            font-size: 2em;
+        }
+        
+        .slideshowControlLeft {
+        
+            float: left;
+        
+        }
+        
+        .slideshowControlRight {
+        
+            float: right;
+        
+        }        
+        
+        .slideshowControlOff {
+         
+            border-color: Gray;
+            color: Gray;
+            cursor: default;
+        }
+        
+        
+        .slideshowControlOn {
+         
+            border-color: Black;
+            color: Black;
+            cursor: pointer;
+            
+        }
+                
+        .slideshowControlOn:hover {
+         
+            border-color: #ffd700;
+            color: #ffd700;
+            
+        }                
+                
+
+        .slideshowImage {
+         
+            margin-left: auto;
+            margin-right: auto;   
+            display: block;
+        }                
+        
+        .slideshowControls {
+         
+            margin-bottom: 8px;
+            
+        }
+                
+                
+        /* ##############################  CHARACTER SHEET STYLES ########################################### */
+        
+        .highlight {
+            
+            background-color: #ffd700;   
+            
+        }
+        
+        
+        #characterSheet {
+         
+            border: 3px solid black;
+            background-color: white;   
+            width: 800px;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            right: 0px;            
+
+        }    
+        
+        .characterSheetToggle {
+        
+            border: 3px solid black;
+            background-color: white; 
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            font-weight: bold;
+            width: 50px;
+            text-align: center;
+        }
+        
+        #characterSheetToggleOff {
+         
+            right: 0px;
+            
+        }
+        
+        #characterSheetToggleOn {
+         
+            right: 803px;
+            display: none;
+            
+        }        
+    
+        #characterSheetLogo {
+         
+            padding: 7px;
+            margin-right: 4px;
+            width: 264px;
+            
+        }
+    
+    
+        .characterSheetSection {
+            
+            border-bottom: 2px solid black;
+            
+        }
+        
+        .characterSheetSubsection {
+         
+            border-bottom: 1px solid black;
+            
+        }
+    
+        .characterSheetSectionHeader {
+         
+            border-bottom: 2px solid black;
+            padding: 4px;
+            text-align: center;
+            font-size: 110%;
+            font-weight: bold;
+            clear: both;
+            
+        }
+        
+        .characterSheetHeadingTraits {
+         
+            width: 532px;
+            float: right;   
+            padding-top: 4px;
+            
+        }
+        
+        #characterSheetName {
+         
+            font-size: 250%;
+            font-weight: bold;   
+            
+        }
+        
+        #characterSheetType {
+         
+            width: 264px;
+            float: left;   
+            
+        }
+        
+        #characterSheetCaste {
+         
+            margin-left: 4px;
+            width: 264px;
+            float: left;   
+            
+        }        
+        
+        
+        
+        .characterSheetAttributeGroup {
+         
+            width: 264px;
+                                    
+        }
+        
+        #socialAttributes, #mentalAttributes {
+        
+            float: right;
+            padding-left: 4px;
+            
+        }
+        
+        
+        .characterSheetTraitWrapper {
+         
+            padding: 4px;
+            
+        }
+        
+        .characterSheetTraitLabel {
+         
+            width: 123px;
+            float: left;
+            
+        }
+        
+        .characterSheetTraitDots {
+            
+            width: 123px;
+            float: left;
+            text-align: right;
+            
+        }
+        
+        
+        .characterSheetAbilityGroup {
+         
+            width: 264px;
+            
+        }
+        
+        .characterSheetAbilityGroupLabel {
+         
+            font-weight: bold;
+            text-align: center;   
+            
+        }
+        
+        #zenithAbilities, #twilightAbilities, #dawnAbilities, #eclipseAbilities, #specialtiesAbilityGroup {
+         
+            float: right;   
+            
+        }
+        
+        
+        .characterSheetAbilityGroupLabel {
+         
+            padding: 4px;
+            
+        }
+        
+        #physicalAttributes, #nightAbilities, #backgroundAbilityGroup {
+         
+            padding-left: 4px;
+            
+        }
+        
+        #dawnAbilities {
+         
+            width: 268px;
+            
+        }
+        
+        #willpower, #virtues, #defenceValues {
+         
+            width: 264px;
+            float: right;
+            
+        }
+        
+        .defenceValue {
+         
+            width: 88px;
+            float: left;
+            font-size: 80%;
+            text-align: center;
+            
+        }
+        
+        #willpowerDots, #willpowerBoxes, .virtueDots, .virtueBoxes, .characterSheetVirtueLabel, #essenceDots, #limitBoxes {
+         
+            text-align: center;
+            
+        }
+        
+        .characterSheetVirtueWrapper {
+         
+            width: 123px;
+            float: left;
+            
+        }
+        
+        #defenceValuesLabel {
+        
+            margin: 8px 0px 8px 0px;
+            
+        }
+        
+        .healthLevelsLabel {
+         
+            width: 126px;
+            float: left; 
+            text-align: right;
+            
+        }
+        
+        .healthLevelsBoxes {
+         
+            width: 126px;
+            float: right; 
+            text-align: left;
+            padding-top: 3px;
+            
+        }      
+        
+        .healthLevelsBoxesDialogue {
+         
+            width: 126px;
+            float: right; 
+            text-align: left;
+            padding-top: 6px;
+            
+        }            
+        
+        .healthLevels {
+
+            clear: both;
+            padding: 4px;
+        
+        }  
+        
+        #health {
+         
+            width: 268px;
+            vertical-align: top;
+            float: left;
+
+        }
+        
+        #intimacies {
+         
+            padding-top: 8px;
+            width: 268px;
+            vertical-align: top;
+            float: left;
+
+        }  
+        
+        .characterSheetIntimacy {
+         
+            text-align: center;
+            
+        }      
+        
+        #soak, #weapons {
+         
+            width: 532px;
+            float: right;
+                       
+        }
+        
+        #soakTable, #weaponTable {
+         
+            border: 2px solid black;
+            width: 524px;
+            margin: 4px;
+            
+        }
+        
+        #soakTable td, #soakTable th, #weaponTable td, #weaponTable th {
+         
+            border: 1px solid black;   
+            text-align : center;
+        }
+        
+        #essence {
+         
+            width: 268px;
+            float: left;
+            
+        }
+        
+        #essencePoolPersonalAvailableLabel, #essencePoolPersonalAvailableNumber {
+         
+            margin-bottom: 8px;
+            
+        }
+        
+        .characterSheetEssencePoolLabel {
+         
+            width: 126px;
+            float: left; 
+            text-align: right;
+            
+        }
+        
+        .characterSheetEssencePoolNumber {
+         
+            width: 126px;
+            float: right; 
+            text-align: left;
+                   
+        }      
+        
+        .characterSheetEssencePool {
+
+            clear: both;
+            padding: 4px;
+        
+        }         
+        
+        #limitAbilityGroupLabel {
+         
+            padding-top: 20px;
+            
+        }
+        
+        #virtueFlaw {
+         
+         text-align: center;
+            
+        }
+        
+        #charms {
+         
+            width: 532px;
+            float: right;       
+            
+        }
+        
+        .characterSheetCharm {
+         
+            clear: both;
+            padding: 4px;
+            
+        }
+        
+        .characterSheetCharmLabel {
+         
+            width: 400px;
+            
+        }
+        
+        .characterSheetCharmCost {
+        
+            width: 120px;
+            float: right;
+            
+        }
+        
+        
+        .traitLabelSpecialty {
+            
+            font-size: 80%;            
+            width: 186px;
+            
+        }
+        
+        .traitDotsSpecialty {
+         
+            width: 60px;            
+            
+        }
+        
+        #otherEquipment {
+         
+            padding: 4px;   
+            
+        }
+        
+    
+        /* ##############################  DICE ROLLER STYLES ########################################### */
+    
+        .dice  {
+         
+            float: left;
+            width: 100px;
+            
+        }    
+        
+        #successes {
+            
+            clear: both;
+            font-weight: bold;
+            font-size: 110%;
+            
+        }
+        
+        #diceBox {
+            
+            border: 3px solid #f10101;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            width: 750px;
+            border-radius: 5px;
+        }
+        
+        #rollFormDiv {
+            
+            border: 3px solid #ffd700;
+            background-color: White;
+            padding: 4px;
+            font-size: 110%;
+            font-weight: bold;
+            margin-bottom: 8px;
+         
+        }
+        
+        
+        #specificPools {
+            
+            border: 3px solid #ffd700;
+            background-color: White;
+            padding: 4px;
+            
+        }    
+            
+            
+        #specificPoolsHeading {
+         
+            font-size: 110%;
+            font-weight: bold;
+            
+        }
+            
+        #diceRollerDV {
+         
+            text-decoration: underline;
+            color: blue;
+            
+        }   
+            
+            
+        /* ##############################  COMBAT TRACKER STYLES ########################################### */
+        
+        
+        #combatTracker {
+         
+            border: 3px solid black;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            width: 750px;
+            display: none;
+            
+        }
+        
+        #combatTrackerHeader {
+         
+            border-bottom: 2px solid black;   
+            
+        }
+        
+        #combatTrackerTitle {
+         
+            width: 69%;
+            float: left;
+            
+        }        
+        
+        #combatReactionCount {
+            
+            width: 30%;
+            float: right;
+            text-align: right;
+        }
+        
+        #tickTracker {
+         
+            border-bottom: 2px solid black;
+            padding: 4px;
+            
+        }
+        
+        .tick {
+         
+            width: 103px;
+            float: left;
+            border: 1px solid black;
+            margin-left: 1px;
+            
+        }
+        
+        .tickLabel {
+         
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding: 2px;   
+            
+        }
+        
+        .tickActors {
+         
+            height: 100px;
+            padding: 2;
+            text-align: center;   
+            
+        }
+        
+        #combatTrackerCombatants {
+          
+          padding: 4px;
+            
+        }
+        
+        .combatant {
+         
+            width: 30%;
+            height: 200px;
+            float: left;
+            border: 1px solid black;
+            margin-left: 5px;
+            padding: 4px;
+            
+        }
+        
+        .combatantName {
+         
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding: 2px;   
+            
+        }        
+        
+        .combatantBuffs { 
+            
+            display: none;
+            text-align: center;
+            
+        }  
+        
+        .combatantElevation { 
+            
+            display: none;
+            
+        }          
+        #combatTrackerHealthLevelsWrapper {
+         
+            width: 300px;
+            
+        }
+        
+        /* ##############################  SOCIAL COMBAT TRACKER STYLES ########################################### */  
+        
+        
+       #socialTracker {
+         
+            border: 3px solid black;
+            background-color: white; 
+            padding: 4px;   
+            margin-bottom: 8px;
+            width: 750px;
+            display: none;
+            
+        }
+        
+        #socialTrackerHeader {
+         
+            border-bottom: 2px solid black;   
+            
+        }
+        
+        #socialTrackerTitle {
+         
+            width: 69%;
+            float: left;
+            
+        }        
+        
+        #socialReactionCount {
+            
+            width: 30%;
+            float: right;
+            text-align: right;
+        }
+        
+        #socialTickTracker {
+         
+            border-bottom: 2px solid black;
+            padding: 4px;
+            
+        }      
+        
+        #socialTrackerCombatants {
+          
+          padding: 4px;
+            
+        }
+        
+        .combatantMIV {
+         
+            padding-top: 8px;
+            text-align: center;
+            
+        }   
+         
+        .combatantEssence { 
+            
+            display: none;
+            text-align: center;
+            
+        }               
