@@ -1,0 +1,204 @@
+/*############################################ GENERIC STYLES #######################################################*/    
+
+#pohGameArea {
+
+
+   
+}
+    
+    
+.pohLandscapeBackdrop {
+    
+    display: block;
+    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    
+    text-align: right;
+    
+    overflow: hidden;
+ 
+    z-index: 1;
+    
+}
+
+.pohLandscapeBackdropImage {
+ 
+    height: 100%;
+    
+}
+
+
+/*############################################ MENU STYLES #######################################################*/    
+
+#pohMenuButtonsWrapper {
+ 
+    width: 60%;   
+    
+}
+
+#pohCreditsText {
+ 
+    width: 60%;
+    
+}
+
+#pohLoadableGamesWrapper {
+ 
+    width: 60%;
+    
+}
+
+#pohHelpBox {
+ 
+    width: 60%;
+    
+}
+    
+/*############################################ ALICE'S DESK STYLES #######################################################*/
+    
+.pohAliceDeskGameArea {
+    
+    background-image: url("../images/backdrops/deskBG.jpg");
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}    
+    
+#pohAliceDeskNewsWrapper {
+    
+    width: 60%;
+    
+}
+
+#pohAliceDeskStatusWrapper {
+    
+    width: 60%;
+    
+}
+
+#pohAliceDeskAdviceWrapper {
+    
+    width: 35%;
+
+    float: right;
+    
+    
+}    
+    
+    
+#pohAliceDeskRelationshipsWrapper {
+ 
+    width: 35%;
+    
+    float: right;   
+    
+    
+}
+
+#heartsListWrapper {
+    
+    width: 60%;   
+    clear: none;
+    
+}
+    
+
+/*############################################ CHARACTER SHEET STYLES #######################################################*/
+
+
+#pohHeartDetailsProfileImageWrapper {
+ 
+    display: none;   
+    
+}
+
+#pohHeartDetailsTraitWrapper {
+ 
+    width: 60%;
+    
+}
+
+
+
+
+#pohHeartDetailsConnectionsWrapper {
+ 
+    width: 60%;
+    
+}
+
+
+/*############################################ NEWS ITEM STYLES #######################################################*/
+
+#pohNewsItemTextWrapper {
+    
+    width: 60%; 
+    
+}
+
+
+#pohNewsItemImageSmallWrapperSolo {
+ 
+    display: none;
+    
+}
+
+/*############################################ ADVICE STYLES #######################################################*/
+
+#pohAdviceAliceLetterHead {
+    
+    width: 60%;
+    min-width: 750px;
+   
+}
+
+#pohAdviceHeartsWrapper {
+    
+    width: 60%;
+    min-width: 750px;
+   
+}    
+
+#pohAdviceAliceLetterDatePlan {
+
+    width: 60%;
+    min-width: 750px;
+   
+}  
+
+#pohAdviceAliceLetterExtracurricular {
+
+    width: 60%;
+    min-width: 750px;
+    
+    
+}  
+
+#pohAdviceSendAction {
+    
+    width: 60%;
+    min-width: 750px;
+   
+}    
+
+/*############################################ REMILIA SHOP STYLES #######################################################*/
+
+#pohRemiliaShopTextWrapper {
+ 
+    width: 60%;
+    
+}
+
+/*############################################ END GAME STYLES #######################################################*/
+
+#pohEndGameWrapper {
+ 
+    width: 60%;
+    
+}
+
+

@@ -1,0 +1,1330 @@
+
+body {
+    
+    background-color: White;  /*Gets set sometimes in viewRenderers, do a search if you're changing*/
+    
+    font-size: 0.9em;
+    
+}
+
+
+/* ##############################  MENU STYLES ########################################### */
+
+/*OVERRIDING ERG CORE*/
+
+
+.pohMenuButton {
+ 
+    margin: 16px;
+    padding: 8px;
+    font-size: 2em;
+    
+    background-color: #d76fa4;
+    color: White;
+    
+    text-align: center; 
+    border-radius: 5px;
+    
+}
+
+
+#pohCreditsText {
+ 
+    padding: 8px;
+    
+}
+
+/* LOAD MENU */
+
+#pohLoadQuicksave {
+ 
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    width: 40%;
+    height: 8%;   
+    
+}
+
+#pohLoadAutosave {
+ 
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    width: 40%;
+    height: 8%;   
+    
+}
+
+
+
+/*############################################ GENERIC STYLES #######################################################*/
+
+label {
+ 
+    cursor: pointer;
+    
+}
+
+.pohNavBar {
+ 
+    position: absolute;
+    left: 0px;
+    
+    width: 100%;
+    height: 4em;
+    
+    background-color: #536eb5;
+    
+    color: White;
+    
+    z-index: 3;
+    
+    margin: 0px;
+    
+}
+
+#pohTopNav {
+ 
+    top: 0px;
+    
+    border-bottom: 3px solid #d76fa4;
+    
+}
+
+#pohBottomNav {
+ 
+    bottom: 0px;
+    
+    border-top: 3px solid #d76fa4;
+    
+}
+
+.pohNavButton {
+ 
+    background-color: #d76fa4;
+    
+    color: White;
+    
+    text-align: center;
+    
+    font-size: 2em;
+    
+    z-index: 4;
+    
+    height: 2em;
+
+    line-height: 2em;    
+    
+    font-weight: bold;
+    
+}
+
+
+#pohMainMenuButton {
+    
+    position: absolute;
+    left: 70%;
+    bottom: 0px;
+    
+    width: 15%;    
+    
+    border-right: 1px solid White;
+    
+}
+
+#pohHelpButton {
+    
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    
+    width: 15%;    
+    
+    border-left: 1px solid White;
+ 
+}
+
+
+#pohReturnToAliceDesk {
+ 
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    
+}
+
+.pohTopNavTitle {
+ 
+    font-weight: bold;    
+    font-size: 3em;
+    
+    text-align: center;
+    
+    width: 60%;
+    
+    position: absolute;
+    left: 20%;
+    top: 0px;
+    
+    height: 1.33em;
+    line-height: 1.33em;    
+    
+}
+
+#pohGameArea {
+ 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    height: 100%;   
+    width: 100%;
+    
+    z-index: 2;
+    
+    margin: 0px;
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+        
+}
+
+
+.pohGameAreaBuffer {
+ 
+    height: 4em;
+    
+}
+
+
+.pohSectionHeader {
+    
+    background-color: #536eb5;
+    color: White;
+    font-weight: bold;
+    font-size: 1.5em;
+    
+    text-align: center;
+    
+    margin: 8px;
+    padding: 8px;
+        
+    border-radius: 5px;
+    
+}
+
+.pohSectionSubHeader {
+    
+    background-color: #536eb5;
+    color: White;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+    text-align: center;
+    
+    margin: 8px;
+    padding: 4px;
+        
+    border-radius: 5px;
+    
+}
+
+
+.pohTextCell {
+ 
+    background-color: White;
+    
+    border: 3px solid #d76fa4;
+    border-radius: 5px;
+    
+    margin: 8px;
+}
+
+.pohLandscapeBackdrop {
+ 
+    display: none;
+    
+}
+
+.pohProfileImage {
+ 
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+/*############################################ TITLE SCREEN STYLES #######################################################*/
+
+.pohTitleScreenGameArea {
+    
+    background-image: url("../images/backdrops/deskBG.jpg");
+    background-position: bottom left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}   
+
+#pohTitleScreenNewGame {
+ 
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    
+    width: 33%;
+    
+    border-top: 1px solid #d76fa4;
+    
+}
+
+#pohTitleScreenLoadGame {
+ 
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    
+    width: 33%;
+    
+    border-top: 1px solid #d76fa4;
+    
+}
+
+#pohTitleScreenText {
+    
+    float: right;
+    
+    width: 33%;
+ 
+    font-size: 1.2em;
+    
+    padding: 8px;
+    
+}
+
+/*############################################ ALICE'S DESK STYLES #######################################################*/
+
+
+#pohAliceDeskWeek {
+ 
+    font-weight: bold;    
+    font-size: 2em;
+    
+    position: absolute;
+    left: 8px;
+    top: 0px;
+    
+    height: 2em;
+    line-height: 2em;
+}
+
+#pohAliceDeskPrestige {
+ 
+    font-weight: bold;    
+    font-size: 2em;
+    
+    text-align: center;
+    
+    width: 30%;
+    
+    position: absolute;
+    left: 35%;
+    top: 0px;
+    
+    height: 2em;
+    line-height: 2em;    
+    
+}
+
+#pohAliceDeskNextWeek {
+ 
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    
+    width: 30%;
+    
+}
+
+#pohAliceDeskRemiliaShop {
+    
+    /*height: 100%;
+    
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    
+    padding-left: 2%;
+    padding-right: 2%;*/
+   
+}
+
+
+.pohAliceDeskGameArea {
+ 
+    background-color: White;
+    
+}
+
+#pohAliceDeskNewsWrapper {
+
+    margin: 8px;
+        
+}
+
+#pohAliceDeskStatusWrapper {
+
+    margin: 8px;
+    
+}
+
+.pohAliceDeskNewsTab {
+ 
+    
+    overflow-y: auto;
+    
+}
+
+.pohAliceDeskNewsItem {
+ 
+    margin: 8px;
+    padding: 8px;
+    
+    border: 2px solid #d76fa4;
+    border-radius: 5px;
+    
+}
+
+.pohAliceDeskNewsItem:hover {
+ 
+    border-color: #536eb5;
+     
+}
+
+.pohAliceDeskNewsItemTitle {
+ 
+    font-weight: bold;
+    
+}
+
+.pohAliceDeskNewsNew {
+ 
+    color: #d76fa4;
+    font-weight: bold;    
+    
+}
+
+.pohAliceDeskNewsItemSummary {
+ 
+    font-size: 0.8em;
+    color: #333333;
+    
+}
+
+
+#pohAliceDeskAdviceWrapper {
+    
+    margin: 8px;
+    
+    height: 33em;
+    overflow-y auto;
+    
+    width: 45%;
+    float: right;
+    
+}
+
+
+#pohAliceDeskRelationshipsWrapper {
+ 
+    margin: 8px;
+    
+    height: 33em;
+    overflow-y auto;
+    
+    width: 45%;
+    float: left;
+    
+    
+}
+
+#heartsListWrapper {
+    
+    margin: 8px;
+    width: 100%;   
+    clear: both;
+    padding-left: 4px;
+}
+  
+
+.pohHeartsListItem {
+ 
+    border-radius: 5px;
+    cursor: pointer;
+    
+    width: 19.5%;
+    
+    float: left;
+    
+    color: White;
+    background-color: #d76fa4;
+    
+    margin: 8px 0.5% 0px 0px;
+    
+    text-align: center;
+    
+    
+}
+
+.pohHeartsListItem:hover {
+ 
+    border-color: White;
+    
+}
+
+.pohHeartsListItemTextWrapper {
+ 
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+
+.pohHeartsListItemName {
+ 
+    font-weight: bold;
+}
+
+
+.pohAliceDeskAdvice {
+    
+    margin: 8px;
+    padding: 8px;
+    
+    border: 2px solid #d76fa4;
+    border-radius: 5px;
+    
+}
+
+.pohAliceDeskAdvice:hover {
+ 
+    border-color: #536eb5;
+    
+}
+
+.pohAliceDeskAdviceDate {
+ 
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+
+.pohAliceDeskRelationship {
+    
+    margin: 8px;
+    padding: 8px;
+    
+    border: 2px solid #d76fa4;
+    border-radius: 5px;
+    
+}
+
+.pohAliceDeskRelationshipNames {
+ 
+    font-size: 1.5em;
+    
+}
+
+
+
+
+/*############################################ HEART DETAIL STYLES #######################################################*/
+
+
+#pohHeartDetailsProfileImageWrapper {
+ 
+    width: 50%;
+    float: left;
+    
+}
+
+#pohHeartDetailsTitle {
+ 
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 4px;   
+    
+    text-align: center;
+}
+
+
+#pohHeartDetailsBioWrapper {
+ 
+    width: 49%;
+    float: left;
+    
+}
+
+.pohHeartDetailsLabelValueWrapper {
+ 
+    clear: both;
+    margin: 8px;
+    
+}
+
+.pohHeartDetailsLabel {
+ 
+    width: 50%;
+    float: left;
+    font-weight: bold;
+    
+}
+
+.pohHeartDetailsValue {
+ 
+    width: 50%;
+    float: left;
+    
+}
+
+
+#pohHeartDetailsTraitWrapper {
+    
+    margin: 8px;
+    
+}
+
+.pohHeartDetailsTrait {
+ 
+    margin: 4px 8px 4px 8px;
+    
+}
+
+
+#pohHeartDetailsConnectionsWrapper {
+    
+    margin: 8px;
+    
+}
+
+#pohHeartDetailsRelationshipsWrapper {
+
+    margin: 8px; 
+     
+}
+
+#pohHeartDetailsConnectionsWrapper {
+
+    margin: 8px; 
+     
+}
+
+
+.pohHeartDetailsConnection {
+ 
+    margin: 8px;
+    padding: 8px;
+    
+    border: 2px solid #d76fa4;
+    border-radius: 5px;
+    
+}
+
+.pohHeartDetailsConnectionName {
+    
+    font-size: 1.5em;
+    
+}
+
+.pohHeartDetailsConnectionPassion {
+ 
+    width: 20%;
+    float: left;
+    
+}
+
+.pohHeartDetailsConnectionAttraction {
+ 
+    width: 20%;
+    float: left;
+    
+}
+
+.pohHeartDetailsConnectionCompatibility {
+ 
+    width: 55%;
+    float: left;
+    
+}
+
+
+
+.pohHeartDetailsAttributeCategoryWrapper {
+ 
+    width: 33%;
+    float: left;   
+    
+}
+
+.pohHeartDetailsAttributeReactionCategoryWrapper {
+ 
+    width: 50%;
+    float: left;   
+    
+}
+
+.pohHeartDetailsAttributeLabel {
+ 
+    width: 60%;
+    float: left;
+    font-weight: bold;
+    text-align: left;
+    
+}
+
+.pohHeartDetailsAttributeValue {
+ 
+    width: 40%;
+    float: left;
+    text-align: right;
+}
+
+.pohHeartDetailsTraitCategoryWrapper {
+ 
+    width: 33%;
+    float: left;   
+    
+}
+
+.pohAdviceAttributeTestWrapper {
+ 
+    width: 48%;
+    float: left;
+    
+}
+
+
+#pohHeartDetailsUnsolicitedAdvice {
+    
+   margin: 8px;
+   
+}
+
+/*############################################ NEWS ITEM STYLES #######################################################*/
+
+
+
+
+
+#pohNewsItemTextWrapper {
+ 
+
+    margin: 8px;
+    
+    overflow-y: auto;
+    
+}
+
+#pohNewsItemHeader {
+ 
+    text-align: center;
+    font-size: 2em;
+    padding: 8px;
+            
+}
+
+#pohNewsItemText {
+ 
+    overflow-y: auto;
+    
+    padding: 8px;
+    
+    font-size: 1.5em; 
+    
+}
+
+#pohNewsItemImageSmallWrapperSolo {
+ 
+    width: 50%;
+    
+    border-radius: 5px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#pohNewsItemImageSmallWrapper1 {
+ 
+    width: 50%;
+    
+    border-radius: 5px;
+    
+    float: left;
+    
+}
+
+#pohNewsItemImageSmallWrapper2 {
+ 
+    width: 50%;
+    
+    border-radius: 5px;
+    
+    float: left;
+    
+}
+
+#pohNewsItemImageSmallWrapperSolo {
+ 
+    width: 50%;
+    
+    border-radius: 5px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.pohNewsItemImageSmall {
+ 
+    width: 100%;
+    
+}
+
+.pohNewsItemAction {
+    
+    border: 2px solid #d76fa4;
+    border-radius: 5px;
+    background-color: #d76fa4;
+
+    color: White;
+    font-weight: bold;
+
+    font-size: 2em;
+    
+    padding: 8px;
+    text-align: center;
+    
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    cursor: pointer;
+    
+}
+
+#pohNewsItemAdvice p {
+ 
+    margin: 8px;
+    
+}
+
+/*############################################ END GAME STYLES #######################################################*/
+
+#pohEndGameHeaderWrapper {
+ 
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    
+}
+
+#pohEndGameTrueLoveWrapper {
+ 
+
+    
+}
+
+#pohEndGameTrueLoveHeader {
+    
+    background-color: #d76fa4;
+    
+    color: White;
+    font-weight: bold;
+    font-size: 3em; 
+    text-align: center;   
+    
+    border-radius: 5px;
+    margin: 8px;
+    padding: 8px;
+    
+}
+
+.pohEndGameRelationshipTrueLove {
+ 
+    background-color: #d76fa4;
+    color: White;
+    font-weight: bold;
+    
+    border-radius: 5px;
+    margin: 8px;
+    
+}
+
+.pohEndGameRelationshipHeart1ImageWrapper {
+    
+    width: 25%;
+    float: left;
+    
+    margin: 8px 0px 8px 1%;
+    
+}
+
+.pohEndGameRelationshipHeart2ImageWrapper {
+    
+    width: 25%;
+    float: left;
+    
+    margin: 8px 0px 8px 1%;
+    
+}
+
+.pohEndGameRelationshipImage {
+ 
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.pohEndGameRelationshipTextWrapper {
+ 
+    width: 47%;
+    float: left;
+    font-size: 2em;
+    text-align: center;
+    margin: 8px 0px 8px 1%;
+}
+
+.pohEndGameRelationshipHeartName {
+ 
+    padding: 8px;
+    
+}
+
+
+#pohEndGameCoupleWrapper {
+    
+    
+}
+
+#pohEndGameCoupleHeader {
+    
+    background-color: #536eb5;
+    
+    color: White;
+    font-weight: bold;
+    font-size: 3em;    
+    text-align: center;
+    
+    border-radius: 5px;
+    margin: 8px;
+    padding: 8px;
+    
+    
+}
+
+.pohEndGameRelationshipCouple {
+ 
+    background-color: #536eb5;
+    color: White;
+    font-weight: bold;
+    
+    border-radius: 5px;
+    margin: 8px;
+    
+}
+
+
+/*############################################ ADVICE STYLES #######################################################*/
+
+
+#pohAdviceAliceLetterHead {
+ 
+    font-size: 1.2em;
+    padding: 8px;
+    
+}
+
+#pohAdviceHeartsWrapper {
+ 
+    padding: 8px;
+    
+}
+
+#pohAdviceHeart1Wrapper {
+ 
+    width: 50%;
+    float: left;
+    
+}
+
+.pohAdviceHeartBioWrapper {
+ 
+    width: 50%;
+    float: left;
+    
+}
+
+#pohAdviceHeart1ProfileImageWrapper {
+ 
+    width: 50%;
+    float: left;
+    margin-left: -8px;
+        
+}
+
+#pohAdviceHeart2Wrapper {
+ 
+    width: 50%;
+    float: left;
+    
+}
+
+#pohAdviceHeart2BioWrapper {
+ 
+    margin-left: 8px;
+    margin-right: -16px;
+    
+}
+
+#pohAdviceHeart2ProfileImageWrapper {
+ 
+    width: 50%;
+    float: left;
+    margin-left: 8px;
+    
+}
+
+.pohAdviceHeartConnectionPassion {
+ 
+    width: 50%;
+    float: left;
+    margin-left: 8px;
+}
+
+.pohAdviceHeartConnectionAttraction {
+ 
+    width: 50%;
+    float: left;
+    margin-left: 8px;
+    margin-right: -16px;
+}
+
+#pohAdviceHeart2RelationshipDetails {
+ 
+    margin-left: 8px;
+    
+}
+
+#pohAdviceHeart2CompatibilityDetails  {
+ 
+    margin-left: 8px;
+    
+}
+
+#pohAdviceAliceLetterDatePlan {
+
+    font-size: 1.2em;
+
+    padding: 8px;
+    
+}
+
+
+#pohAdviceAliceLetterExtracurricular {
+ 
+    font-size: 1.2em;
+    
+    padding: 8px;
+    
+}
+
+.pohAdviceExtracurricularAttributeWrapper {
+ 
+    float: left;
+    margin-right: 8px;
+    
+}
+
+.pohAdviceExtracurricularTraitWrapper {
+ 
+    float: left;
+    margin-right: 8px;
+    
+}
+
+#pohAdviceExtracurricularAttributeRaiseForm {
+ 
+    display: none;
+    
+}
+
+#pohAdviceExtracurricularAttributeLowerForm {
+ 
+    display: none;
+    
+}
+
+#pohAdviceExtracurricularPassionRaiseForm {
+ 
+    display: none;
+    
+}
+
+#pohAdviceExtracurricularPassionLowerForm {
+ 
+    display: none;
+    
+}
+
+#pohAdviceExtracurricularTraitForm {
+ 
+    display: none;
+    
+}
+
+
+#pohAdviceSendAction {
+ 
+    margin: 8px;
+    
+}
+
+
+
+/*############################################ REMILIA SHOP STYLES #######################################################*/
+
+
+
+
+
+#pohRemiliaShopTextWrapper {
+ 
+    overflow-y: auto;
+    
+}
+
+#pohRemiliaShopHeader {
+ 
+    text-align: center;
+    font-size: 2em;
+    padding: 8px;
+            
+}
+
+#pohRemiliaShopLetter {
+ 
+    font-size: 1.2em; 
+ 
+    padding: 8px;
+    
+}
+
+
+#pohRemiliaShopHeartDetailsProfileImageWrapper {
+ 
+    width: 50%;
+    float: left;
+    
+}
+
+#pohRemiliaShopHeartDetailsBioWrapper {
+ 
+    width: 49%;
+    float: left;
+    
+}
+
+#pohRemiliaShopHeartDetailsHeaderWrapper {
+ 
+    width: 40%;
+    float: left;
+    margin-right: 8px;
+    
+}
+
+
+#pohRemiliaShopHeartDetailsProfileImage {
+ 
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+#pohRemiliaShopHeartDetailsTitle {
+ 
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 4px;   
+    
+    text-align: center;
+    
+}
+
+#pohRemiliaShopHeartDetailsName {
+ 
+    font-weight: bold;
+    font-size: 2em;   
+    padding: 4px;
+    
+}
+
+#pohRemiliaShopHeartDetailsTraitWrapper {
+   
+   margin: 8px;
+    
+}
+
+#pohRemiliaShopHeartDetailsAttributeWrapper {
+ 
+    margin: 8px;
+    
+}
+
+#pohRemiliaShopHeartDetailsAttributeReactionWrapper {
+
+    margin: 8px;
+
+}
+
+#pohRemiliaShopBuyWrapper {
+ 
+    padding: 8px;
+    
+}
+
+#pohRemiliaShopBuyAction {
+ 
+    margin: 8px;   
+    
+}
+
+
+
+/* ##############################  INTERSTITIAL STYLES ########################################### */
+
+.pohInterstitialText {
+ 
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+        
+    width: 100%;
+    
+    font-weight: bold;
+    color: White;
+    text-align: center;
+    
+    font-size: 2em;
+    height: 2em;
+    line-height: 2em;
+    background-color: #536eb5;
+    
+    
+}
+
+#pohInterstitialAction {
+    
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 3;
+    
+}
+
+
+/* ##############################  HELP STYLES ########################################### */
+
+#pohHelpToCBox {
+ 
+    margin: 8px;
+    padding: 8px;
+    
+    background-color: White;
+    
+    border: 3px solid #d76fa4;
+    border-radius: 5px;
+    
+}
+
+#pohHelpToCHeader {
+ 
+    text-align: center;
+    
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.pohHelpSection {
+ 
+    margin: 16px 8px 16px 8px;
+    padding: 8px;
+    
+    background-color: White;
+    
+    border: 3px solid #d76fa4;
+    border-radius: 5px;
+    
+    text-align: center;
+    
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.pohHelpSubSection {
+ 
+    margin: 8px;
+    padding: 8px;
+    
+    background-color: White;
+    
+    border: 3px solid #d76fa4;
+    border-radius: 5px;
+    
+    text-align: center;
+    
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.pohHelpItem {
+ 
+    margin: 8px;
+    padding: 8px;
+    
+    background-color: White;
+    
+    border: 3px solid #d76fa4;
+    border-radius: 5px;
+    
+}
+
+.pohHelpItemTitle {
+ 
+    text-align: center;
+    
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.pohHelpAnchor {
+ 
+    display: block;
+    margin-bottom: 4em;
+    
+}
+
+
+
+/*############################################ JQUERY UI HACKS #######################################################*/
+
+.ui-widget {
+ 
+    font-size: 1em;   
+    
+}
